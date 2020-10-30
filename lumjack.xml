@@ -1,0 +1,166 @@
+<!DOCTYPE profile>
+<profile>
+ <data name="CommandPrefix">0x0</data>
+ <data name="UseObjectsQueue">True</data>
+ <data name="ShowCorpseNames">False</data>
+ <data name="ShowCreatureNames">False</data>
+ <data name="OpenCorpses">False</data>
+ <data name="OpenCorpsesRange">0x2</data>
+ <data name="ShowMobileHits">False</data>
+ <data name="PositionInTitle">False</data>
+ <data name="ForceResolution">False</data>
+ <data name="GameWindowWidth">0x320</data>
+ <data name="GameWindowHeight">0x258</data>
+ <data name="FilterLight">False</data>
+ <data name="FilterMusic">False</data>
+ <data name="FilterBardsMusic">False</data>
+ <data name="FilterSound">False</data>
+ <data name="FilterWeather">False</data>
+ <data name="FilterSeason">False</data>
+ <data name="FixedSeason">0x0</data>
+ <data name="FilterDeath">False</data>
+ <data name="FilterRepeatedMessages">False</data>
+ <data name="FilterOthersSpeechColor">False</data>
+ <data name="FilterSnoopingMessages">False</data>
+ <data name="FilterTradeWindow">False</data>
+ <data name="FilterRewardGump">False</data>
+ <data name="HandsBeforePotions">False</data>
+ <data name="HandsBeforeCasting">False</data>
+ <data name="SmartTarget">0x0</data>
+ <data name="SmartTargetRange">False</data>
+ <data name="SmartTargetRangeValue">0xc</data>
+ <data name="HighlightCurrentTarget">False</data>
+ <data name="BlockInvalidHeal">False</data>
+ <data name="ActionDelay">0x258</data>
+ <data name="UseObjectsLimit">0x5</data>
+ <data name="TargetShare">0x0</data>
+ <data name="MountSerial">0xffffffff</data>
+ <data name="BladeSerial">0xffffffff</data>
+ <data name="BoneCutter">False</data>
+ <data name="AutoMount">False</data>
+ <data name="AutoBandage">False</data>
+ <data name="AutoBandageTarget">0x0</data>
+ <data name="AutoBandageScale">False</data>
+ <data name="AutoBandageCount">False</data>
+ <data name="AutoBandageStart">False</data>
+ <data name="AutoBandageStartValue">0x5f</data>
+ <data name="AutoBandageDelay">0x9c4</data>
+ <data name="AutoBandageFormula">False</data>
+ <data name="AutoBandageHidden">False</data>
+ <data name="OpenDoors">False</data>
+ <data name="UseDoors">False</data>
+ <data name="SpellsColor">False</data>
+ <data name="SpellsMode">0x2</data>
+ <data name="SpellsTargetShare">0x0</data>
+ <data name="OpenDoorsMode">0x0</data>
+ <data name="OpenCorpsesMode">0x3</data>
+ <data name="ShowMobileFlags">False</data>
+ <data name="StateHighlightMode">0x0</data>
+ <data name="StaticFields">False</data>
+ <data name="CountStealthSteps">False</data>
+ <data name="FriendsListOnly">False</data>
+ <data name="FriendsParty">False</data>
+ <data name="MoveConflictingItems">False</data>
+ <data name="CustomCaption">True</data>
+ <data name="CustomCaptionMode">0x1</data>
+ <data name="CustomCaptionText">UO - $name $statusbar - $hits/$mana/$stam %cntr %cntr-2 %cntr-3 %cntr-4 %cntr-5 %cntr-9 %cntr-8 %cntr-7 %cntr-7</data>
+ <data name="WarnCounters">True</data>
+ <data name="WarnCountersValue">0x5</data>
+ <data name="HighlightReagents">True</data>
+ <data name="DisplayCountersName">False</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="DisplayCountersImage">True</data>
+ <data name="FilterKarmaMessages">False</data>
+ <data name="FilterFameMessages">False</data>
+ <data name="PreventDismount">False</data>
+ <data name="PreventAttackFriends">False</data>
+ <data name="AutoSearchContainers">False</data>
+ <data name="AutoAcceptParty">False</data>
+ <data name="StaticFieldsMode">0x0</data>
+ <counters>
+  <counter image="True" graphic="0x1bd7" format="cntr" color="0x0" name="board" enabled="True"/>
+  <counter image="True" graphic="0xf7a" format="cntr-2" color="0x0" name="Black Pearl" enabled="True"/>
+  <counter image="True" graphic="0xf8c" format="cntr-3" color="0x0" name="Sulfurous Ash" enabled="True"/>
+  <counter image="True" graphic="0xf86" format="cntr-4" color="0x0" name="Mandrake Root" enabled="True"/>
+  <counter image="True" graphic="0xf7b" format="cntr-5" color="0x0" name="Blood Moss" enabled="True"/>
+  <counter image="True" graphic="0xef3" format="cntr-6" color="0x0" name="blank scroll" enabled="True"/>
+  <counter image="True" graphic="0x1bf2" format="cntr-7" color="0x0" name="ingots" enabled="True"/>
+  <counter image="True" graphic="0xf39" format="cntr-8" color="0x0" name="shovel" enabled="True"/>
+  <counter image="True" graphic="0x1eb8" format="cntr-9" color="0x0" name="tool kit" enabled="True"/>
+ </counters>
+ <scavenger enabled="False"/>
+ <autosearchexemptions/>
+ <objects>
+  <obj name="axe">0x40041b45</obj>
+  <obj name="gem box">0x40044e57</obj>
+  <obj name="home">0x40044e15</obj>
+  <obj name="homelumber">0x4004bd0b</obj>
+  <obj name="ore storage">0x40044e56</obj>
+  <obj name="ore1">0x40044e13</obj>
+  <obj name="ore2">0x40044de9</obj>
+  <obj name="treebookone">0x40040ab4</obj>
+  <obj name="treebooktwo">0x40040ab2</obj>
+ </objects>
+ <hotkeys/>
+ <macros>
+  <macro interrupt="True" loop="True" name="lumjack">if not @findobject 'TreeBookOne';promptalias 'TreeBookOne';endif;if not @findobject 'TreeBookTwo';promptalias 'TreeBookTwo';endif;if not @findobject 'HomeLumber';promptalias 'HomeLumber';endif;if not listexists 'TreeBook';createlist 'TreeBook';pushlist 'TreeBook' 'TreeBookOne';pushlist 'TreeBook' 'TreeBookTwo';endif;if not listexists 'Runes';createlist 'Runes';pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to 'TreeBook';for 0 to 'Runes';pause 500;clearjournal;pause 500;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];//tells you which rune you are on, see runelist above;sysmsg 'Rune' 33;sysmsg Runes[] 33;pause 3000;//equips axe if it's not SC;dress 'axe';pause 2000;while organizing;pause 5000;endwhile;if not @findobject 'lefthand';//change type to your axe;if findtype 0xf43 0 'backpack';setalias 'axe' 'found';equipitem 0x410a9d80 2;endif;endif;if @injournal 'LeftHand';dress 'axe';endif;while not @injournal 'enough wood here';pause 300;//chop logs to boards;if @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';else;//chop trees;useobject 'LeftHand';waitfortarget 1000;targettileoffset 0 -1 0;endif;while @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';pause 500;endwhile;// Change this if your getting overweight, Subtract 25  from your max weight.;if weight > 430;//make remaining logs boards;while @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';pause 500;endwhile;//recall home;useobject 0x40040ab3;waitforgump 0x59 15000;replygump 0x59 50;pause 3000;//unload;organizer 'Boards';while organizing;pause 2000;endwhile;pause 2000;//시약 보급;useobject 0x4001dec1;pause 1000;organizer 'RecallRegent';//go back to where you were;pause 4000;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];pause 3000;//re-equip axe if needed;if not @findobject 'lefthand';equipitem 0x410a9d80 2;dress 'axe';pause 1000;endif;endif;if @injournal 'use an axe';break;endif;//마나 재생;if mana &lt; 20;useskill 'meditation';while mana &lt; maxmana;endwhile;endif;endwhile;endfor;endfor;</macro>
+  <macro interrupt="True" loop="True" name="dd">if not @findobject 'TreeBookOne';promptalias 'TreeBookOne';endif;if not @findobject 'TreeBookTwo';promptalias 'TreeBookTwo';endif;if not @findobject 'HomeLumber';promptalias 'HomeLumber';endif;if not listexists 'TreeBook';createlist 'TreeBook';pushlist 'TreeBook' 'TreeBookOne';pushlist 'TreeBook' 'TreeBookTwo';endif;if not listexists 'Runes';createlist 'Runes';pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to 'TreeBook';for 0 to 'Runes';pause 500;clearjournal;pause 500;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];//tells you which rune you are on, see runelist above;sysmsg 'Rune' 33;sysmsg Runes[] 33;pause 3000;//equips axe if it's not SC;if not @findobject 'lefthand';dress axe;//change type to your axe;if findtype 0xf43 0 'backpack';dress axe;setalias 'axe' 'found';equipitem 0x410a9d80 2;endif;endif;while not @injournal 'enough wood here';pause 300;//chop logs to boards;if @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';else;//chop trees;useobject 'LeftHand';waitfortarget 1000;targettileoffset 0 -1 0;endif;while @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';pause 500;endwhile;// Change this if your getting overweight, Subtract 25  from your max weight.;if weight > 450;//make remaining logs boards;while @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';pause 500;endwhile;//recall home;cast "Recall";pause 2000;target 0x4001afef;pause 3000;//unload;organizer 'Boards';while organizing;pause 2000;endwhile;//go back to where you were;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];pause 3000;//re-equip axe if needed;if not @findobject 'lefthand';equipitem 0x410a9d80 2;pause 1000;endif;endif;if @injournal 'use an axe';dress axe;break;endif;endwhile;endfor;endfor;</macro>
+  <macro interrupt="True" loop="True" name="dddd">dress 'axe';while organizing;pause 5000;endwhile;if not @findobject 'lefthand';//change type to your axe;if findtype 0xe75 0 'backpack';setalias 'axe' 'found';equipitem 0x410a9d80 2;endif;endif;if @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';else;//chop trees;useobject 'LeftHand';waitfortarget 1000;targettileoffset 0 -1 0;endif;while @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';pause 500;endwhile;// Change this if your getting overweight, Subtract 25  from your max weight.;if weight > 450;//make remaining logs boards;while @findtype 0x1bdd 'any' 'backpack';useobject 'LeftHand';waitfortarget 1000;target! 'found';pause 500;endwhile;//recall home;cast "Recall";pause 2000;target 0x4004bdbe;pause 3000;//unload;organizer 'Boards';while organizing;pause 2000;endwhile;//go back to where you were;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];pause 3000;//re-equip axe if needed;if not @findobject 'lefthand';equipitem 0x410a9d80 2;pause 1000;endif;endif;if @injournal 'use an axe';break;endif;endwhile;</macro>
+  <macro interrupt="True" loop="True" name="lum2">//Check if there is a hatchet in hand and equip one if any in pack.;if not findobject 'lefthand';if @findtype 0xf43 'any' 'backpack';equipitem 'found' 2;else;sysmsg 'You have run out of hatchets!' 24;endif;endif;//While there is still wood to cut, cut wood;while not @injournal 'enough wood';useobject 'lefthand';waitfortarget 2500;targettileoffset 0 -1 0;pause 3050;//Check if there is still a hatchet equipped, in case it broke get another;if not findobject 'lefthand';if @findtype 0xf43 'any' 'backpack';equipitem 'found' 2;else;sysmsg 'You have run out of hatchets!' 24;endif;endif;endwhile;@clearjournal;//Cut logs into boards.;if @findtype '0x1bdd' 'any' 'backpack';useobject 'lefthand';waitfortarget 15000;target 'found';endif;stop;</macro>
+  <macro interrupt="True" loop="True" name="ddd">if counttype 0x1bf2 0 'backpack' &lt; 30;organizer 'IngotShift';endif;</macro>
+  <macro interrupt="True" loop="True" name="ddfdfdf">while not @injournal 'enough wood';useobject 0x4004bf4d;waitfortarget 15000;targettile 2420 435 15;endwhile;pause 1000;</macro>
+  <macro interrupt="True" loop="False" name="gg"></macro>
+  <macro interrupt="True" loop="False" name="mana">if mana &lt; 70;use skill 'meditation';while mana &lt; maxmana;endwhile;endif;</macro>
+  <macro interrupt="True" loop="True" name="mining">removelist 'Runes';removelist 'OreBook';@clearjournal;pause 200;if not @findalias 'Ore Storage';headmsg 'Select the storage';promptalias 'Ore Storage';endif;if not @findalias 'gem box';headmsg 'Select the gem box';promptalias 'gem box';endif;if not @findobject 'Ore1';promptalias 'Ore1';endif;if not @findobject 'Ore2';promptalias 'Ore2';endif;//if not @findobject 'Ore3';// promptalias 'Ore3';//endif;//if not @findobject 'Ore4';// promptalias 'Ore4';//endif;if not @findobject 'Home';headmsg 'Select the home book';promptalias 'Home';endif;if not listexists 'OreBook';createlist 'OreBook';endif;if list 'OreBook' == 0;@pushlist 'OreBook' 'Ore1';@pushlist 'OreBook' 'Ore2';// @pushlist 'OreBook' 'Ore3';//@pushlist 'OreBook' 'Ore4';endif;if not listexists 'ore';createlist 'ore';@pushlist 'ore' 0x19b9;@pushlist 'ore' 0x19ba;@pushlist 'ore' 0x19b8;@pushlist 'ore' 0x19b7;endif;if not listexists 'gem';createlist 'gem';@pushlist 'gem' 0xf25;@pushlist 'gem' 0xf10;@pushlist 'gem' 0xf21;@pushlist 'gem' 0xf19;@pushlist 'gem' 0xf15;@pushlist 'gem' 0xf2d;@pushlist 'gem' 0xf16;@pushlist 'gem' 0xf13;@pushlist 'gem' 0xf26;@pushlist 'gem' 0x3197;@pushlist 'gem' 0x3195;@pushlist 'gem' 0x3198;@pushlist 'gem' 0x3193;@pushlist 'gem' 0x3192;@pushlist 'gem' 0x3194;@pushlist 'gem' 0xf28;endif;if not listexists 'Runes';createlist 'Runes';endif;if list 'Runes' == 0;@pushlist 'Runes' 5;@pushlist 'Runes' 11;@pushlist 'Runes' 17;@pushlist 'Runes' 23;@pushlist 'Runes' 29;@pushlist 'Runes' 35;@pushlist 'Runes' 41;@pushlist 'Runes' 47;@pushlist 'Runes' 53;@pushlist 'Runes' 59;@pushlist 'Runes' 65;@pushlist 'Runes' 71;@pushlist 'Runes' 77;@pushlist 'Runes' 83;@pushlist 'Runes' 89;@pushlist 'Runes' 95;endif;for 0 to OreBook;for 0 to 'Runes';@clearjournal;pause 500;@useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 1500;if @injournal 'blocked' 'system';clearjournal;replay;endif;if mana &lt; 10;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;// check ingot, shovel, tinker tool and then dig;while not @injournal 'There is no metal here to mine' 'system';pause 300;if counttype 0x1bf2 0 'backpack' &lt; 10;pause 500;useobject 'Home';waitforgump 0x554b87f3 5000;replygump 0x554b87f3 5;pause 1500;useobject 'Ore Storage';pause 1000;movetype 0x1bf2 'Ore Storage' 'backpack' [(0 0 0)] 'any' 100;pause 500;useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 1500;endif;if counttype 0x1eb8 0 'backpack' &lt; 2;usetype 0x1eb8 0 'backpack';waitforgump 0x38920abd 5000;replygump 0x38920abd 8;waitforgump 0x38920abd 5000;replygump 0x38920abd 23;waitforgump 0x38920abd 5000;pause 100;endif;if not @findtype 0xe86 0 'backpack';usetype 0x1eb8 0 'backpack';waitforgump 0x38920abd 15000;replygump 0x38920abd 8;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;waitforgump 0x38920abd 15000;pause 100;endif;@usetype '0xe86' '0' 'backpack';waitfortarget 5000;targettileoffset 0 -1 0;pause 700;if @injournal "You can't mine" "system" "target";headmsg 'wrong spot';poplist 'Runes' 'front';break;endif;// world save;if @injournal 'save complete' 'system';clearjournal;canceltarget;endif;// go home;if weight > '260';pause 500;useobject 'Home';waitforgump 0x554b87f3 5000;replygump 0x554b87f3 5;pause 2000;for 0 to 'ore';while @findtype ore[] 'any' 'backpack';moveitem 'found' 'Ore Storage';pause 1050;endwhile;endfor;for 0 to 'gem';while @findtype gem[] 'any' 'backpack';moveitem 'found' 'gem box';pause 1050;endwhile;endfor;//recall back;useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 1500;endif;endwhile;endfor;poplist 'Runes' 'front';endfor;if not timerexists 'shownames';createtimer 'shownames';endif;if not timerexists 'instruments';createtimer 'instruments';endif;while not dead 'self';@canceltarget;//;if timer 'shownames' > 5000;shownames 'all';headmsg '♪' 124;settimer 'shownames' 0;endif;if @injournal 'cns';playsound 'warning.wav';@clearjournal;pause 2222;endif;//;</macro>
+  <macro interrupt="True" loop="False" name="tratinker">//가방에 잉갓 많이 넣으세요;//팅커툴(바구니)가방에 하나;//팅커스킬 10이상이어야함;if skill! 'Tinkering' >= 100;setskill 'Tinkering' 'locked';stop;endif;if skill 'Tinkering' &lt; 100;usetype 0x1eb8;replygump 0x38920abd 8;waitforgump 0x38920abd 15000;replygump 0x38920abd 121;waitforgump 0x38920abd 15000;elseif skill 'Tinkering' &lt; 45;usetype 0x1eb8;replygump 0x38920abd 8;waitforgump 0x38920abd 15000;replygump 0x38920abd 23;waitforgump 0x38920abd 15000;endif;</macro>
+  <macro interrupt="True" loop="True" name="tinkertmp">while;if skill! 'Tinkering' >= 61;setskill 'Tinkering' 'locked';stop;endif;if counttype 0x1bf2 0 'backpack' &lt; 30;organizer 'IngotShift';endif;pause 1000;useobject 0x40048ebe;waitforgump 0x38920abd 15000;replygump 0x38920abd 15;waitforgump 0x38920abd 15000;replygump 0x38920abd 16;waitforgump 0x38920abd 15000;organizer 'TrashShift';endwhile;</macro>
+ </macros>
+ <autoloot>
+  <enabled>False</enabled>
+  <container>0xffffffff</container>
+  <guards>False</guards>
+ </autoloot>
+ <spellgrid/>
+ <organizer>
+  <group complete="True" source="0x4001dec1" stack="True" target="0x40041b40" loop="False" name="RecallRegent">
+   <item amount="0x1e" graphic="0xf7b"/>
+   <item amount="0x1e" graphic="0xf7a"/>
+   <item amount="0x1e" graphic="0xf86"/>
+  </group>
+  <group complete="True" source="0x40041b40" stack="True" target="0x4001dec1" loop="False" name="Boards">
+   <item amount="0x0" graphic="0x1bd7"/>
+   <item amount="0x0" graphic="0x1bd7"/>
+   <item amount="0x0" graphic="0x1bd7"/>
+   <item amount="0x0" graphic="0x3191"/>
+   <item amount="0x0" graphic="0x2f5f"/>
+   <item amount="0x0" graphic="0x318f"/>
+   <item amount="0x0" graphic="0x3199"/>
+   <item amount="0x0" graphic="0x3190"/>
+  </group>
+  <group complete="True" source="0x4001dec1" stack="True" target="0x40044d54" loop="False" name="BoardShift">
+   <item amount="0x64" graphic="0x1bd7"/>
+  </group>
+  <group complete="True" source="0x40044d54" stack="True" target="0x40048d7a" loop="False" name="TrashShift">
+   <item amount="0x0" graphic="0x1032"/>
+   <item amount="0x0" graphic="0x10e7"/>
+  </group>
+  <group complete="True" source="0x4001dec1" stack="True" target="0x40044d54" loop="False" name="IngotShift">
+   <item amount="0xc8" graphic="0x1bf2"/>
+  </group>
+ </organizer>
+ <vendors>
+  <buystate list="" enabled="False"/>
+  <sellstate list="" enabled="False"/>
+  <shoppinglist complete="False" type="Buy" limit="999" name="Buy-1">
+   <item amount="999" graphic="0xf7b"/>
+   <item amount="999" graphic="0xf7a"/>
+   <item amount="999" graphic="0xf86"/>
+  </shoppinglist>
+  <shoppinglist complete="False" type="Buy" limit="999" name="Buy-2"/>
+ </vendors>
+ <dresslist name="axe">
+  <item layer="2">0x4004bf4d</item>
+ </dresslist>
+ <dresslist name="Dress-1"/>
+</profile>

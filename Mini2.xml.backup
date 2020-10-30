@@ -1,0 +1,116 @@
+<!DOCTYPE profile>
+<profile>
+ <data name="CommandPrefix">0x0</data>
+ <data name="UseObjectsQueue">True</data>
+ <data name="ShowCorpseNames">False</data>
+ <data name="ShowCreatureNames">False</data>
+ <data name="OpenCorpses">False</data>
+ <data name="OpenCorpsesRange">0x2</data>
+ <data name="ShowMobileHits">False</data>
+ <data name="PositionInTitle">False</data>
+ <data name="ForceResolution">False</data>
+ <data name="GameWindowWidth">0x320</data>
+ <data name="GameWindowHeight">0x258</data>
+ <data name="FilterLight">False</data>
+ <data name="FilterMusic">False</data>
+ <data name="FilterBardsMusic">False</data>
+ <data name="FilterSound">False</data>
+ <data name="FilterWeather">False</data>
+ <data name="FilterSeason">False</data>
+ <data name="FixedSeason">0x0</data>
+ <data name="FilterDeath">False</data>
+ <data name="FilterRepeatedMessages">False</data>
+ <data name="FilterOthersSpeechColor">False</data>
+ <data name="FilterSnoopingMessages">False</data>
+ <data name="FilterTradeWindow">False</data>
+ <data name="FilterRewardGump">False</data>
+ <data name="HandsBeforePotions">False</data>
+ <data name="HandsBeforeCasting">False</data>
+ <data name="SmartTarget">0x0</data>
+ <data name="SmartTargetRange">False</data>
+ <data name="SmartTargetRangeValue">0xc</data>
+ <data name="HighlightCurrentTarget">False</data>
+ <data name="BlockInvalidHeal">False</data>
+ <data name="ActionDelay">0x258</data>
+ <data name="UseObjectsLimit">0x5</data>
+ <data name="TargetShare">0x0</data>
+ <data name="MountSerial">0xffffffff</data>
+ <data name="BladeSerial">0xffffffff</data>
+ <data name="BoneCutter">False</data>
+ <data name="AutoMount">False</data>
+ <data name="AutoBandage">False</data>
+ <data name="AutoBandageTarget">0x0</data>
+ <data name="AutoBandageScale">False</data>
+ <data name="AutoBandageCount">False</data>
+ <data name="AutoBandageStart">False</data>
+ <data name="AutoBandageStartValue">0x5f</data>
+ <data name="AutoBandageDelay">0x9c4</data>
+ <data name="AutoBandageFormula">False</data>
+ <data name="AutoBandageHidden">False</data>
+ <data name="OpenDoors">False</data>
+ <data name="UseDoors">False</data>
+ <data name="SpellsColor">False</data>
+ <data name="SpellsMode">0x2</data>
+ <data name="SpellsTargetShare">0x0</data>
+ <data name="OpenDoorsMode">0x0</data>
+ <data name="OpenCorpsesMode">0x3</data>
+ <data name="ShowMobileFlags">False</data>
+ <data name="StateHighlightMode">0x0</data>
+ <data name="StaticFields">False</data>
+ <data name="CountStealthSteps">False</data>
+ <data name="FriendsListOnly">False</data>
+ <data name="FriendsParty">False</data>
+ <data name="MoveConflictingItems">False</data>
+ <data name="CustomCaption">True</data>
+ <data name="CustomCaptionMode">0x1</data>
+ <data name="CustomCaptionText">UO - $name $statusbar - $hits/$mana/$stam</data>
+ <data name="WarnCounters">True</data>
+ <data name="WarnCountersValue">0x5</data>
+ <data name="HighlightReagents">True</data>
+ <data name="DisplayCountersName">False</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="DisplayCountersImage">True</data>
+ <data name="FilterKarmaMessages">False</data>
+ <data name="FilterFameMessages">False</data>
+ <data name="PreventDismount">False</data>
+ <data name="PreventAttackFriends">False</data>
+ <data name="AutoSearchContainers">False</data>
+ <data name="AutoAcceptParty">False</data>
+ <data name="StaticFieldsMode">0x0</data>
+ <counters/>
+ <scavenger enabled="False"/>
+ <autosearchexemptions/>
+ <objects>
+  <obj name="homeore">0x40051122</obj>
+  <obj name="ore storage">0x40044e56</obj>
+  <obj name="ore1">0x4003c0f7</obj>
+  <obj name="ore2">0x4003c101</obj>
+ </objects>
+ <hotkeys/>
+ <macros>
+  <macro interrupt="True" loop="True" name="d">//Author: Experience;//Title: Recalling Miner;//Description: Recalling Miner. Must have a 1 Pickaxe or ingots.;//You will need a book with the default rune marked right next to your storage.;//Stand South of each Spot you want to mine;//All Books must have 16 runes to run properly!!;//Be sure to stock Regs before playing!;removelist 'Runes';removelist 'OreBook';@clearjournal;headmsg "Reminder: Have your regs stocked...";pause 200;headmsg 'About 100 of each recall reg...';if not @findalias 'Ore Storage';promptalias 'Ore Storage';endif;if not @findobject 'Ore1';promptalias 'Ore1';endif;if not @findobject 'Ore2';promptalias 'Ore2';endif;//if not @findobject 'Ore3';// promptalias 'Ore3';//endif;if not @findobject 'HomeOre';promptalias 'HomeOre';endif;if not listexists 'OreBook';createlist 'OreBook';endif;if list 'OreBook' == 0;pushlist 'OreBook' 'Ore1';pushlist 'OreBook' 'Ore2';// pushlist 'OreBook' 'Ore3';endif;if @findtype '0xe86' '0' 'backpack' 'any' '2';headmsg 'Pick found. Ready!';elseif @findtype '0x1bf2' '0' 'backpack' 'any' '2' and skill 'tinkering' > 80;headmsg 'resorting to Tinkering....';@usetype '0x1eb8' '0' 'backpack' 'any' '2';waitforgump 0x38920abd 15000;replygump 0x38920abd 8;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;else;headmsg 'No way to mine found...';stop;endif;if not listexists 'Runes';createlist 'Runes';endif;if list 'Runes' == 0;pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to OreBook;for 0 to 'Runes';pause 500;while mana &lt; 20;endwhile;@clearjournal;pause 500;//useobject 0x40044e15;//waitforgump 0x59 15000;//replygump 0x59 50;useobject OreBook[];waitforgump 0x59 15000;replygump 0x59 Runes[];pause 4000;if injournal 'fail' 'system';@clearjournal;replay;endif;if injournal 'blocked' 'system';@clearjournal;replay;endif;while not @injournal 'There is no metal here to mine' 'system';//use Pick to northern tile until specified weight is reached;pause 300;usetype '0xe86' '0' 'backpack' 'any' '2';waitfortarget 1000;targettileoffset 0 -1 0;pause 800;if @injournal "You can't mine there." "system";headmsg 'Bad Rune';@clearjournal;poplist 'Runes' 'front';break;endif;// once weight is reached go home, if getting overweight, lower it;if weight > '325';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg '첫번쨰';if @injournal 'The spell fizzles.' 'Fizzles.';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg'리콜실패후 재리콜';replay;endif;if @injournal 'destination not found.' 'destination';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg'리콜실패후 재리콜';endif;if injournal 'fizzles' 'spell';@clearjournal;replay;endif;//put up Ore;organizer 'IngotShift';while @findtype '0x19b9' 'any' 'backpack' 'any' '2';moveitem 'found' 'Ore Storage';pause 800;endwhile;while mana &lt; 40;endwhile;//recall back to where you were;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 2000;endif;if not @findtype '0xe86' '0' 'backpack' 'any' '2';headmsg 'Out of picks';replay;endif;endwhile;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;endfor;poplist 'Runes' 'front';endfor;//recall home so Ore container is found;pause 1000;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;cast 'recall';autotargetobject 'HomeOre';pause 4000;poplist 'OreBook' 'front';</macro>
+  <macro interrupt="True" loop="True" name="ddd">if findobject '0xe86' &lt; 3;pause 500;organizer 'IngotTinker';pause 1000;useobject 0x4004ad80;waitforgump 0x38920abd 15000;replygump 0x38920abd 15;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;waitforgump 0x38920abd 15000;endif;</macro>
+  <macro interrupt="True" loop="False" name="tt"></macro>
+ </macros>
+ <autoloot>
+  <enabled>False</enabled>
+  <container>0xffffffff</container>
+  <guards>False</guards>
+ </autoloot>
+ <spellgrid/>
+ <organizer>
+  <group loop="False" name="IngotShift" source="0x40044d54" stack="True" complete="True" target="0x40044e56">
+   <item graphic="0x19b9" amount="0x0"/>
+   <item graphic="0x19ba" amount="0x0"/>
+   <item graphic="0x19b8" amount="0x0"/>
+  </group>
+  <group loop="False" name="IngotTinker" source="0x40044e56" stack="True" complete="True" target="0x40044d54">
+   <item graphic="0x1bf2" amount="0x14"/>
+  </group>
+ </organizer>
+ <vendors>
+  <buystate list="" enabled="False"/>
+  <sellstate list="" enabled="False"/>
+ </vendors>
+</profile>

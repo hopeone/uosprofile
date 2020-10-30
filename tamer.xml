@@ -1,0 +1,197 @@
+<!DOCTYPE profile>
+<profile>
+ <data name="CommandPrefix">0x0</data>
+ <data name="UseObjectsQueue">True</data>
+ <data name="ShowCorpseNames">True</data>
+ <data name="ShowCreatureNames">False</data>
+ <data name="OpenCorpses">True</data>
+ <data name="OpenCorpsesRange">0x2</data>
+ <data name="ShowMobileHits">False</data>
+ <data name="PositionInTitle">True</data>
+ <data name="ForceResolution">False</data>
+ <data name="GameWindowWidth">0x320</data>
+ <data name="GameWindowHeight">0x258</data>
+ <data name="FilterLight">True</data>
+ <data name="FilterMusic">False</data>
+ <data name="FilterBardsMusic">False</data>
+ <data name="FilterSound">False</data>
+ <data name="FilterWeather">False</data>
+ <data name="FilterSeason">False</data>
+ <data name="FixedSeason">0x0</data>
+ <data name="FilterDeath">False</data>
+ <data name="FilterRepeatedMessages">False</data>
+ <data name="FilterOthersSpeechColor">False</data>
+ <data name="FilterSnoopingMessages">False</data>
+ <data name="FilterTradeWindow">False</data>
+ <data name="FilterRewardGump">False</data>
+ <data name="HandsBeforePotions">False</data>
+ <data name="HandsBeforeCasting">False</data>
+ <data name="SmartTarget">0x0</data>
+ <data name="SmartTargetRange">False</data>
+ <data name="SmartTargetRangeValue">0xc</data>
+ <data name="HighlightCurrentTarget">True</data>
+ <data name="BlockInvalidHeal">False</data>
+ <data name="ActionDelay">0x258</data>
+ <data name="UseObjectsLimit">0x5</data>
+ <data name="TargetShare">0x0</data>
+ <data name="MountSerial">0xffffffff</data>
+ <data name="BladeSerial">0xffffffff</data>
+ <data name="BoneCutter">False</data>
+ <data name="AutoMount">False</data>
+ <data name="AutoBandage">False</data>
+ <data name="AutoBandageTarget">0x0</data>
+ <data name="AutoBandageScale">False</data>
+ <data name="AutoBandageCount">False</data>
+ <data name="AutoBandageStart">False</data>
+ <data name="AutoBandageStartValue">0x5f</data>
+ <data name="AutoBandageDelay">0x9c4</data>
+ <data name="AutoBandageFormula">False</data>
+ <data name="AutoBandageHidden">False</data>
+ <data name="OpenDoors">True</data>
+ <data name="UseDoors">True</data>
+ <data name="SpellsColor">False</data>
+ <data name="SpellsMode">0x2</data>
+ <data name="SpellsTargetShare">0x0</data>
+ <data name="OpenDoorsMode">0x1</data>
+ <data name="OpenCorpsesMode">0x1</data>
+ <data name="ShowMobileFlags">False</data>
+ <data name="StateHighlightMode">0x0</data>
+ <data name="StaticFields">False</data>
+ <data name="CountStealthSteps">False</data>
+ <data name="FriendsListOnly">False</data>
+ <data name="FriendsParty">False</data>
+ <data name="MoveConflictingItems">False</data>
+ <data name="CustomCaption">True</data>
+ <data name="CustomCaptionMode">0x1</data>
+ <data name="CustomCaptionText">UO - $name $statusbar - $hits/$mana/$stam %cntr-4 %cntr-3 %cntr-2 %cntr  %cntr-7 %cntr-6  %cntr-5</data>
+ <data name="WarnCounters">True</data>
+ <data name="WarnCountersValue">0x5</data>
+ <data name="HighlightReagents">True</data>
+ <data name="DisplayCountersName">False</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="DisplayCountersImage">True</data>
+ <data name="FilterKarmaMessages">False</data>
+ <data name="FilterFameMessages">False</data>
+ <data name="PreventDismount">False</data>
+ <data name="PreventAttackFriends">False</data>
+ <data name="AutoSearchContainers">False</data>
+ <data name="AutoAcceptParty">False</data>
+ <data name="StaticFieldsMode">0x0</data>
+ <scavenger enabled="False"/>
+ <autosearchexemptions/>
+ <objects>
+  <obj name="found">0x3d3e</obj>
+  <obj name="o">0x4006864f</obj>
+  <obj name="pet1">0x3d3e</obj>
+  <obj name="pet2">0xb689</obj>
+  <obj name="pet3">0xb68a</obj>
+  <obj name="pet4">0x3d3e</obj>
+  <obj name="pet5">0xb68a</obj>
+ </objects>
+ <hotkeys>
+  <hotkey action="macro.play" pass="False" param="kill" key="0x78"/>
+  <hotkey action="macro.play" pass="False" param="follow" key="0x79"/>
+  <hotkey action="macro.play" pass="False" param="stay" key="0x7b"/>
+  <hotkey action="macro.play" pass="False" param="guard" key="0x7a"/>
+  <hotkey action="macro.play" pass="False" param="pet heal" key="0x76"/>
+  <hotkey action="spells.magery.greaterheal" pass="False" key="0x70"/>
+  <hotkey action="spells.magery.paralyze" pass="False" key="0x73"/>
+  <hotkey action="spells.magery.poison" pass="False" key="0x71"/>
+  <hotkey action="actions.shownames.all" pass="False" key="0xbe"/>
+  <hotkey action="combat.bandage.target" pass="False" key="0x74"/>
+  <hotkey action="spells.magery.invisibility" pass="False" key="0x77"/>
+  <hotkey action="skills.animaltaming" pass="False" key="0x431"/>
+  <hotkey action="skills.discordance" pass="False" key="0x75"/>
+  <hotkey action="spells.magery.lightning" pass="False" key="0x72"/>
+ </hotkeys>
+ <macros>
+  <macro interrupt="True" loop="False" name="kill">msg 'all kill';</macro>
+  <macro interrupt="True" loop="False" name="follow">msg 'all follow me';msg 1;</macro>
+  <macro interrupt="True" loop="False" name="stay">msg 'all stay';</macro>
+  <macro interrupt="True" loop="False" name="guard">msg 'all guard me';</macro>
+  <macro interrupt="True" loop="True" name="pet heal"></macro>
+  <macro interrupt="True" loop="False" name="loot">//you need dagger and scissors in backpack;//auto loot may not work on your server !;//also loots feather's and gold;if not @findtype '0x2006' 'any' 'ground' '1' '2';sysmsg ' ******No Corpse Found******' '28';stop;else;@setalias! 'o' 'found';endif;if not @findtype '0xec4' 'any' 'backpack';sysmsg '*****No dagger*****' '25';stop;else;@usetype! '0xec4' 'any' 'backpack';waitfortarget '5000';target! 'o';pause 600;endif;if @findtype! '0x1079' 'any' 'o' 'any' '2';@movetype '0x1079' 'o' 'backpack';pause 2000;@usetype! '0xf9f' 'any' 'backpack';waitfortarget '2000';targettype '0x1079' 'any' 'backpack';pause 600;endif;if @findtype! '0x1bd1' 'any' 'o' 'any' '2';@movetype '0x1bd1' 'o' 'backpack';pause 1000;endif;if @findtype! '0xeed' 'any' 'o' 'any' '2';@movetype '0xeed' 'o' 'backpack';pause 1000;endif;if @findtype! '0xf26' 'any' 'o' 'any' '2';@movetype '0xf26' 'o' 'backpack';pause 1000;endif;ignoreobject 'o';sysmsg 'Corpse Now Ignored' '25';pause '1500';</macro>
+  <macro interrupt="True" loop="True" name="peacetraining">useskill 'peacemaking';pause 10000;</macro>
+  <macro interrupt="True" loop="True" name="asdf">useskill 'Discordance';pause 1000;useonce 0xe9d;</macro>
+  <macro interrupt="True" loop="True" name="veterinarytrain">@cleartargetqueue;@clearjournal;if dead 'self';stop;endif;//Setup;if not findalias 'pet1';headmsg 'Select first pet';promptalias 'pet1';endif;if not findalias 'pet2';headmsg 'Select second pet';promptalias 'pet2';endif;if not findalias 'pet3';headmsg 'Select third pet';promptalias 'pet3';endif;if not findalias 'pet4';headmsg 'Select fourth pet';promptalias 'pet4';endif;if not findalias 'pet5';headmsg 'Select fifth pet';promptalias 'pet5';endif;//Heal them to full;//pet 1;if hits 'pet1' == 0;bandage;autotargetobject 'pet1';pause 7600;endif;if hits 'pet2' == 0;bandage;autotargetobject 'pet2';pause 7600;endif;if hits 'pet3' == 0;bandage;autotargetobject 'pet3';pause 7600;endif;if hits 'pet4' == 0;bandage;autotargetobject 'pet4';pause 7600;endif;if hits 'pet5' == 0;bandage;autotargetobject 'pet5';pause 7600;endif;if diffhits 'pet1' > '0';if diffhits 'pet1' > diffhits 'pet2';if diffhits 'pet1' > diffhits 'pet3';if diffhits 'pet1' > diffhits 'pet4';if diffhits 'pet1' > diffhits 'pet5';if inrange 'pet1' 1;bandage;autotargetobject 'pet1';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;//pet 2;if diffhits 'pet2' > '0';if diffhits 'pet2' > diffhits 'pet1';if diffhits 'pet2' > diffhits 'pet3';if diffhits 'pet2' > diffhits 'pet4';if diffhits 'pet2' > diffhits 'pet5';if inrange 'pet2' 1;bandage;autotargetobject 'pet2';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;//pet 3;if not diffhits 'pet3' == '0';if diffhits 'pet3' > diffhits 'pet1';if diffhits 'pet3' > diffhits 'pet2';if diffhits 'pet3' > diffhits 'pet4';if diffhits 'pet3' > diffhits 'pet5';if inrange 'pet3' 1;bandage;autotargetobject 'pet3';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not diffhits 'pet4' == '0';if diffhits 'pet4' > diffhits 'pet2';if diffhits 'pet4' > diffhits 'pet3';if diffhits 'pet4' > diffhits 'pet1';if diffhits 'pet4' > diffhits 'pet5';if inrange 'pet4' 1;bandage;autotargetobject 'pet4';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not diffhits 'pet5' == '0';if diffhits 'pet5' > diffhits 'pet2';if diffhits 'pet5' > diffhits 'pet3';if diffhits 'pet5' > diffhits 'pet1';if diffhits 'pet5' > diffhits 'pet4';if inrange 'pet5' 1;bandage;autotargetobject 'pet5';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not @injournal 'finish' 'system';pause 1100;replay;else if @injournal 'finish' 'system';@clearjournal;replay;elseif @injournal 'too far away' 'system';@clearjournal;replay;elseif @injournal 'stay close enough' 'system';@clearjournal;replay;endif;</macro>
+  <macro interrupt="True" loop="True" name="peacetr">useobject 0x4037e5bf;pause 2000;</macro>
+  <macro interrupt="True" loop="True" name="discotra">for 9999;pause 1000;useonce 0xe9d;usetype 0xe9d;createtimer 'CCWW';settimer 'CCDWW' 0;for 12;usetype 0xe9d  // 사용 악기 object type 확인하시어 올리시기 바랍니다.;useskill 'Discordance';waitfortarget 5000;target usetype 0xe9d;getenemy 'murderer''grey''innocent' 'criminal';if targetexists 'harmful' and inrange 'enemy' 10;target! 'enemy';endif;if targetexists 'server' and inrange 'enemy' 10;target! 'enemy';endif;pause 2000;if timer 'CCWW' > 9000  // 대상의 개체 수 , 대상의 바딩 난이도에 따라서 조절할 것!;cast "Invisibility";waitfortarget 15000;target! 'self';pause 18000;settimer 'CCWW' 0;endif;endfor;cast "Invisibility";waitfortarget 15000;target! 'self';pause 18000;//  cast "Invisibility";// waitfortarget 15000;// target! 'self';//pause 18000;endfor;</macro>
+  <macro interrupt="True" loop="True" name="tramagery">////////////////////////////////////;// This macro is designed for //;// training both magery and //;// resist from 30. It is intended //;// for characters with 40+ //;// intelligence. //;// //;// Turn on loop and click play! //;////////////////////////////////////;if skill 'magery' &lt; 100;if @injournal 'insufficient mana';clearjournal;useskill 'meditation';while mana &lt; maxmana;endwhile;else;if skill 'magery' &lt; 30;cast 'bless' 'self';pause 1000;elseif skill 'magery' &lt; 45;cast 'bless' 'self';pause 1000;elseif skill 'magery' &lt; 55;cast 'mana drain' 'self';pause 1000;elseif skill 'magery' &lt; 75;cast 'invisibility' 'self';pause 1000;elseif skill 'magery' &lt; 100;cast 'mana vampire' 'self';pause 1000;else;headmsg 'Magery complete!';stop;endif;endif;elseif skill 'resisting spells' &lt; 100;if @injournal 'insufficient mana';clearjournal;useskill 'meditation';while mana &lt; maxmana;endwhile;else;cast 'mana vampire' 'self';pause 1000;endif;else;headmsg 'Magery and resisting spells complete!';stop;endif;</macro>
+ </macros>
+ <autoloot>
+  <enabled>True</enabled>
+  <container>0x4001812a</container>
+  <guards>False</guards>
+ </autoloot>
+ <spellgrid/>
+ <organizer>
+  <group target="0x40065c9d" loop="False" name="rune" complete="True" source="0x4001812a" stack="True">
+   <item amount="0x0" graphic="0x1f14"/>
+  </group>
+  <group target="0x40050454" loop="False" name="regent" complete="True" source="0x4001812a" stack="True">
+   <item amount="0x0" graphic="0xf86"/>
+   <item amount="0x0" graphic="0xf88"/>
+   <item amount="0x0" graphic="0xf8c"/>
+   <item amount="0x0" graphic="0xf7b"/>
+   <item amount="0x0" graphic="0xf7a"/>
+   <item amount="0x0" graphic="0xf8d"/>
+   <item amount="0x0" graphic="0xf85"/>
+   <item amount="0x0" graphic="0xf84"/>
+  </group>
+  <group target="0x40050454" loop="False" name="Organizer-3" complete="True" source="0x4001812a" stack="True">
+   <item amount="0x0" graphic="0xe9d"/>
+   <item amount="0x0" graphic="0x1f14"/>
+  </group>
+ </organizer>
+ <vendors>
+  <buystate enabled="True" list="scir-buy"/>
+  <sellstate enabled="False" list=""/>
+  <shoppinglist type="Buy" name="Buy-1" complete="False" limit="999">
+   <item amount="999" graphic="0xf7b"/>
+   <item amount="999" graphic="0xf88"/>
+   <item amount="999" graphic="0xf8c"/>
+   <item amount="999" graphic="0xf7a"/>
+   <item amount="999" graphic="0xf84"/>
+   <item amount="999" graphic="0xf86"/>
+   <item amount="999" graphic="0xf85"/>
+   <item amount="999" graphic="0xf8d"/>
+  </shoppinglist>
+  <shoppinglist type="Buy" name="scir-buy" complete="False" limit="999">
+   <item amount="999" graphic="0xf7a"/>
+   <item amount="999" graphic="0xf7b"/>
+  </shoppinglist>
+ </vendors>
+ <counters>
+  <counter enabled="True" image="True" name="Sulfurous Ash" graphic="0xf8c" color="0x0" format="cntr"/>
+  <counter enabled="True" image="True" name="Garlic" graphic="0xf84" color="0x0" format="cntr-2"/>
+  <counter enabled="True" image="True" name="Spiders' Silk" graphic="0xf8d" color="0x0" format="cntr-3"/>
+  <counter enabled="True" image="True" name="Mandrake Root" graphic="0xf86" color="0x0" format="cntr-4"/>
+  <counter enabled="True" image="True" name="clean bandage" graphic="0xe21" color="0x0" format="cntr-5"/>
+  <counter enabled="True" image="True" name="Black Pearl" graphic="0xf7a" color="0x0" format="cntr-6"/>
+  <counter enabled="True" image="True" name="Blood Moss" graphic="0xf7b" color="0x0" format="cntr-7"/>
+ </counters>
+ <dresslist container="0x40065c9d" name="regen">
+  <item layer="8">0x400426d3</item>
+  <item layer="14">0x40068cbe</item>
+  <item layer="6">0x4004a8b1</item>
+  <item layer="19">0x4006612b</item>
+  <item layer="7">0x400431e3</item>
+  <item layer="10">0x40068f60</item>
+  <item layer="4">0x400582cf</item>
+  <item layer="22">0x4003ce0a</item>
+  <item layer="13">0x4004d037</item>
+ </dresslist>
+ <dresslist container="0x0" name="taim">
+  <item layer="8">0x40042fb6</item>
+  <item layer="14">0x40068cbe</item>
+  <item layer="6">0x4004a8b1</item>
+  <item layer="19">0x4006612b</item>
+  <item layer="7">0x400431e3</item>
+  <item layer="10">0x40068f60</item>
+  <item layer="4">0x400582cf</item>
+  <item layer="22">0x4003ce0a</item>
+  <item layer="13">0x4004d037</item>
+ </dresslist>
+ <dresslist container="0x0" name="discoset"/>
+</profile>

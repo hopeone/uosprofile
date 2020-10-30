@@ -1,0 +1,146 @@
+<!DOCTYPE profile>
+<profile>
+ <data name="CommandPrefix">0x0</data>
+ <data name="UseObjectsQueue">True</data>
+ <data name="ShowCorpseNames">False</data>
+ <data name="ShowCreatureNames">False</data>
+ <data name="OpenCorpses">False</data>
+ <data name="OpenCorpsesRange">0x2</data>
+ <data name="ShowMobileHits">False</data>
+ <data name="PositionInTitle">False</data>
+ <data name="ForceResolution">False</data>
+ <data name="GameWindowWidth">0x320</data>
+ <data name="GameWindowHeight">0x258</data>
+ <data name="FilterLight">False</data>
+ <data name="FilterMusic">False</data>
+ <data name="FilterBardsMusic">False</data>
+ <data name="FilterSound">False</data>
+ <data name="FilterWeather">False</data>
+ <data name="FilterSeason">False</data>
+ <data name="FixedSeason">0x0</data>
+ <data name="FilterDeath">False</data>
+ <data name="FilterRepeatedMessages">False</data>
+ <data name="FilterOthersSpeechColor">False</data>
+ <data name="FilterSnoopingMessages">False</data>
+ <data name="FilterTradeWindow">False</data>
+ <data name="FilterRewardGump">False</data>
+ <data name="HandsBeforePotions">False</data>
+ <data name="HandsBeforeCasting">False</data>
+ <data name="SmartTarget">0x0</data>
+ <data name="SmartTargetRange">False</data>
+ <data name="SmartTargetRangeValue">0xc</data>
+ <data name="HighlightCurrentTarget">False</data>
+ <data name="BlockInvalidHeal">False</data>
+ <data name="ActionDelay">0x258</data>
+ <data name="UseObjectsLimit">0x5</data>
+ <data name="TargetShare">0x0</data>
+ <data name="MountSerial">0xffffffff</data>
+ <data name="BladeSerial">0xffffffff</data>
+ <data name="BoneCutter">False</data>
+ <data name="AutoMount">False</data>
+ <data name="AutoBandage">False</data>
+ <data name="AutoBandageTarget">0x0</data>
+ <data name="AutoBandageScale">False</data>
+ <data name="AutoBandageCount">False</data>
+ <data name="AutoBandageStart">False</data>
+ <data name="AutoBandageStartValue">0x5f</data>
+ <data name="AutoBandageDelay">0x9c4</data>
+ <data name="AutoBandageFormula">False</data>
+ <data name="AutoBandageHidden">False</data>
+ <data name="OpenDoors">False</data>
+ <data name="UseDoors">False</data>
+ <data name="SpellsColor">False</data>
+ <data name="SpellsMode">0x2</data>
+ <data name="SpellsTargetShare">0x0</data>
+ <data name="OpenDoorsMode">0x0</data>
+ <data name="OpenCorpsesMode">0x3</data>
+ <data name="ShowMobileFlags">False</data>
+ <data name="StateHighlightMode">0x0</data>
+ <data name="StaticFields">False</data>
+ <data name="CountStealthSteps">False</data>
+ <data name="FriendsListOnly">False</data>
+ <data name="FriendsParty">False</data>
+ <data name="MoveConflictingItems">False</data>
+ <data name="CustomCaption">True</data>
+ <data name="CustomCaptionMode">0x1</data>
+ <data name="CustomCaptionText">UO - $name $statusbar - $hits/$mana/$stam %cntr-3 %cntr-2 %cntr %cntr-6 %cntr-5 %cntr-4</data>
+ <data name="WarnCounters">True</data>
+ <data name="WarnCountersValue">0x5</data>
+ <data name="HighlightReagents">True</data>
+ <data name="DisplayCountersName">False</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="CaptionUseNotoHue">True</data>
+ <data name="DisplayCountersImage">True</data>
+ <data name="FilterKarmaMessages">False</data>
+ <data name="FilterFameMessages">False</data>
+ <data name="PreventDismount">False</data>
+ <data name="PreventAttackFriends">False</data>
+ <data name="AutoSearchContainers">False</data>
+ <data name="AutoAcceptParty">False</data>
+ <data name="StaticFieldsMode">0x0</data>
+ <counters>
+  <counter graphic="0xf39" name="shovel" color="0x0" format="cntr" enabled="True" image="True"/>
+  <counter graphic="0x1eb8" name="tool kit" color="0x0" format="cntr-2" enabled="True" image="True"/>
+  <counter graphic="0x1bf2" name="ingots" color="0x0" format="cntr-3" enabled="True" image="True"/>
+  <counter graphic="0xf7b" name="Blood Moss" color="0x0" format="cntr-4" enabled="True" image="True"/>
+  <counter graphic="0xf86" name="Mandrake Root" color="0x0" format="cntr-5" enabled="True" image="True"/>
+  <counter graphic="0xf7a" name="Black Pearl" color="0x0" format="cntr-6" enabled="True" image="True"/>
+ </counters>
+ <scavenger enabled="False"/>
+ <autosearchexemptions/>
+ <objects>
+  <obj name="axe">0x400450bd</obj>
+  <obj name="found">0x4004e8f5</obj>
+  <obj name="gem box">0x40044e56</obj>
+  <obj name="home">0x40044de9</obj>
+  <obj name="homelumber">0x40044de9</obj>
+  <obj name="homeore">0x40044de9</obj>
+  <obj name="ore storage">0x40044e56</obj>
+  <obj name="ore1">0x40051122</obj>
+  <obj name="ore2">0x4004ad80</obj>
+  <obj name="treebookone">0x40044e15</obj>
+  <obj name="treebooktwo">0x40044e13</obj>
+ </objects>
+ <hotkeys/>
+ <macros>
+  <macro interrupt="True" loop="True" name="tratinker">//organizer 'TrashShift';pause 1000;usetype '0x1eb8' 'backpack';//useobject 0x40048ebc;useobject 0x40044dce;waitforgump 0x38920abd 15000;replygump 0x38920abd 121;waitforgump 0x38920abd 15000;</macro>
+  <macro interrupt="True" loop="True" name="mining">if not @findobject 'Ore1';promptalias 'Ore1';endif;if not @findobject 'Ore2';promptalias 'Ore2';endif;if not @findobject 'Home';promptalias 'Home';endif;if not listexists 'TreeBook';createlist 'TreeBook';pushlist 'TreeBook' 'Ore1';pushlist 'TreeBook' 'Ore2';endif;if not listexists 'Runes';createlist 'Runes';pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to 'TreeBook';for 0 to 'Runes';pause 500;clearjournal;pause 500;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];//tells you which rune you are on, see runelist above;sysmsg 'Rune' 33;sysmsg Runes[] 33;pause 3000;//equips axe if it's not SC;dress 'axe';pause 2000;while organizing;pause 5000;endwhile;//if not @findobject 'lefthand';//change type to your axe;//  if findtype 0xf43 0 'backpack';//    setalias 'axe' 'found';//    equipitem 0x410a9d80 2;//  endif;//endif;// if @injournal 'LeftHand';//   dress 'axe';// endif;while not @injournal 'enough wood here';pause 300;//chop logs to boards;//   if @findtype 0x1bdd 'any' 'backpack';//     useobject 'LeftHand';//     waitfortarget 1000;//     target! 'found';//   else;//     //chop trees;//     useobject 'LeftHand';//     waitfortarget 1000;//     targettileoffset 0 -1 0;//   endif;// while @findtype 0x1bdd 'any' 'backpack';//   useobject 'LeftHand';//   waitfortarget 1000;//   target! 'found';//   pause 500;// endwhile;useobject 0x40044dd2;waitfortarget 15000;targettileoffset 0 -1 0;if @injournal "You can't mine" "system" "target";headmsg 'wrong spot';poplist 'Runes' 'front';break;endif;// Change this if your getting overweight, Subtract 25  from your max weight.;if weight > 230;//make remaining logs boards;//  while @findtype 0x1bdd 'any' 'backpack';//    useobject 'LeftHand';//    waitfortarget 1000;//    target! 'found';//    pause 500;//  endwhile;//recall home;useobject 0x40044de9;waitforgump 0x59 15000;replygump 0x59 50;pause 3000;//unload;useobject 0x40044e56;pause 500;organizer 'IngotShift';while organizing;pause 2000;endwhile;pause 2000;//시약 보급;// useobject 0x4001dec1;// pause 1000;// organizer 'RecallRegent';//go back to where you were;pause 4000e;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];pause 3000;//re-equip axe if needed;// if not @findobject 'lefthand';//   equipitem 0x410a9d80 2;//   dress 'axe';//   pause 1000;// endif;endif;//  if @injournal 'use an axe';//  break;// endif;//마나 재생;if mana &lt; 20;useskill 'meditation';while mana &lt; maxmana;endwhile;endif;endwhile;endfor;endfor;</macro>
+  <macro interrupt="True" loop="True" name="tt">cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg '첫번쨰';if @injournal 'The spell fizzles.' 'fizzles.';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg'리콜실패후 재리콜';replay;endif;</macro>
+  <macro interrupt="True" loop="True" name="2">if not @findobject 'TreeBookOne';promptalias 'TreeBookOne';endif;if not @findobject 'TreeBookTwo';promptalias 'TreeBookTwo';endif;if not @findobject 'HomeLumber';promptalias 'HomeLumber';endif;if not listexists 'TreeBook';createlist 'TreeBook';pushlist 'TreeBook' 'TreeBookOne';pushlist 'TreeBook' 'TreeBookTwo';endif;if not listexists 'Runes';createlist 'Runes';pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to 'TreeBook';for 0 to 'Runes';pause 500;clearjournal;pause 500;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];//tells you which rune you are on, see runelist above;sysmsg 'Rune' 33;sysmsg Runes[] 33;pause 3000;//equips axe if it's not SC;// dress 'axe';pause 2000;while organizing;pause 5000;endwhile;//-------------------------------------------------------------------;// 'you can`t mine there.;while not @injournal 'There is no metal here to mine' 'system';pause 300;if @findtype '0xf39' 'any' 'backpack' 'any' '2';@usetype '0xf39' '0'  'backpack' '1' 1;elseif @findtype '0xe86' 'any' 'backpack' 'any' '2';@usetype '0xe86' 'any' 'backpack' 'any' '2';endif;waitfortarget 5000;if direction == 0;targettileoffset 0 -1 0;elseif direction == 1;targettileoffset 1 -1 0;elseif direction == 2;targettileoffset 1 0 0;elseif direction == 3;targettileoffset 1 1 0;elseif direction == 4;targettileoffset 0 1 0;elseif direction == 5;targettileoffset -1 1 0;elseif direction == 6;targettileoffset -1 0 0;elseif direction == 7;targettileoffset -1 -1 0;else;headmsg 'No Tools Found!';endif;pause 600;if @injournal 'no metal' 'system';headmsg 'Time to Move';pause 2000;@clearjournal;endif;while weight >= 380;headmsg 'Time to Smelt';pause 1000;endwhile;while @findtype '0x19b9' 'any' 'backpack' 'any' '2' and weight >= 300;@moveitem 'found' 'mount';pause 600;//recall home;useobject 0x40044de9;waitforgump 0x59 15000;replygump 0x59 50;pause 3000;organizer 'OreShift';endwhile;endwhile;//-------------------------------------------------------------------------;// Change this if your getting overweight, Subtract 25  from your max weight.;if weight > 280;//make remaining logs boards;//recall home;useobject 0x40044de9;waitforgump 0x59 15000;replygump 0x59 50;pause 3000;//unload;organizer 'Boards';while organizing;pause 2000;endwhile;pause 2000;//시약 보급;useobject 0x4001dec1 //시약셋 상자 열기;pause 1000;organizer 'RecallRegent';//go back to where you were;pause 4000;useobject TreeBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];pause 3000;//re-equip axe if needed;endif;if @injournal 'use an axe';break;endif;//마나 재생;if mana &lt; 20;useskill 'meditation';while mana &lt; maxmana;endwhile;endif;endfor;endfor;</macro>
+  <macro interrupt="True" loop="True" name="mini2">if not @findobject 'Ore1';promptalias 'Ore1';endif;if not @findobject 'Ore2';promptalias 'Ore2';endif;if not @findobject 'HomeLumber';promptalias 'HomeLumber';endif;if not listexists 'OreBook';createlist 'OreBook';pushlist 'OreBook' 'Ore1';pushlist 'OreBook' 'Ore2';endif;if not listexists 'Runes';createlist 'Runes';pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to 'OreBook';for 0 to 'Runes';pause 500;clearjournal;msg '다음땅파기';pause 500;useobject OreBook[];waitforgump 0x59 5000;replygump 0x59 Runes[];//tells you which rune you are on, see runelist above;sysmsg 'Rune' 33;sysmsg Runes[] 33;pause 3000;for 0 to OreBook;for 0 to 'Runes';pause 500;while mana &lt; 20;endwhile;@clearjournal;pause 500;useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 4000;if injournal 'blocked' 'system';@clearjournal;replay;endif;msg '땅파기시작';while not @injournal 'There is no metal here to mine' 'system';//use Pick to northern tile until specified weight is reached;pause 300;usetype '0xe86' '0' 'backpack' 'any' '2';waitfortarget 1000;targettileoffset 0 -1 0;pause 800;if @injournal "You can't mine there." "system";headmsg 'Bad Rune';@clearjournal;poplist 'Runes' 'front';break;endif;// once weight is reached go home, if getting overweight, lower it;if weight > '280';msg '집으로';pause 500;useobject 0x40044de9;waitforgump 0x59 15000;replygump 0x59 50;pause 4000;//put up Ore;// while @findtype '0x19b9' 'any' 'backpack' 'any' '2';//moveitem 'found' 'Ore Storage';pause 800;//endwhile;msg '2';organizer 'IngotShift';while mana &lt; 40;endwhile;//recall back to where you were;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;msg '물건내리고 다음룬으로';useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 2000;msg '1';endif;if not @findtype '0xe86' '0' 'backpack' 'any' '2';headmsg 'Out of picks';replay;endif;endwhile;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;endfor;poplist 'Runes' 'front';endfor;//recall home so Ore container is found;pause 1000;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;cast 'recall';autotargetobject 'HomeOre';pause 4000;poplist 'OreBook' 'front';</macro>
+  <macro interrupt="True" loop="True" name="3">while not @injournal 'There is no metal here to mine' 'system';if @findtype '0xf39' 'any' 'backpack' 'any' '2';@usetype '0xf39' '0'  'backpack' '1' 1;elseif @findtype '0xe86' 'any' 'backpack' 'any' '2';@usetype '0xe86' 'any' 'backpack' 'any' '2';endif;waitfortarget 5000;if direction == 0;targettileoffset 0 -1 0;elseif direction == 1;targettileoffset 1 -1 0;elseif direction == 2;targettileoffset 1 0 0;elseif direction == 3;targettileoffset 1 1 0;elseif direction == 4;targettileoffset 0 1 0;elseif direction == 5;targettileoffset -1 1 0;elseif direction == 6;targettileoffset -1 0 0;elseif direction == 7;targettileoffset -1 -1 0;else;headmsg 'No Tools Found!';endif;pause 600;if @injournal 'no metal' 'system';headmsg 'Time to Move';pause 2000;@clearjournal;endif;while weight >= 380;headmsg 'Time to Smelt';pause 1000;endwhile;while @findtype '0x19b9' 'any' 'backpack' 'any' '2' and weight >= 300;@moveitem 'found' 'mount';pause 600;endwhile;endwhile;msg 2;</macro>
+  <macro interrupt="True" loop="True" name="4">if not @findobject 'Ore1';promptalias 'Ore1';endif;if not @findobject 'Ore2';promptalias 'Ore2';endif;if not listexists 'OreBook';createlist 'OreBook';endif;if list 'OreBook' == 0;pushlist 'OreBook' 'Ore1';pushlist 'OreBook' 'Ore2';endif;msg 2;if list 'Runes' == 0;pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;msg 3;for 0 to OreBook;for 0 to 'Runes';pause 500;while not @injournal 'There is no metal here to mine' 'system';if @findtype '0xf39' 'any' 'backpack' 'any' '2';@usetype '0xf39' '0'  'backpack' '1' 1;elseif @findtype '0xe86' 'any' 'backpack' 'any' '2';@usetype '0xe86' 'any' 'backpack' 'any' '2';endif;msg 5;waitfortarget 5000;if direction == 0;targettileoffset 0 -1 0;elseif direction == 1;targettileoffset 1 -1 0;elseif direction == 2;targettileoffset 1 0 0;elseif direction == 3;targettileoffset 1 1 0;elseif direction == 4;targettileoffset 0 1 0;elseif direction == 5;targettileoffset -1 1 0;elseif direction == 6;targettileoffset -1 0 0;elseif direction == 7;targettileoffset -1 -1 0;else;headmsg 'No Tools Found!';endif;pause 600;if @injournal 'no metal' 'system';headmsg 'Time to Move';pause 2000;@clearjournal;endif;while weight >= 380;headmsg 'Time to Smelt';pause 1000;endwhile;while @findtype '0x19b9' 'any' 'backpack' 'any' '2' and weight >= 300;@moveitem 'found' 'mount';pause 600;endwhile;endwhile;endfor;endfor;// 리콜;</macro>
+  <macro interrupt="True" loop="True" name="5">//Author: Experience;//Title: Recalling Miner;//Description: Recalling Miner. Must have a 1 Pickaxe or ingots.;//You will need a book with the default rune marked right next to your storage.;//Stand South of each Spot you want to mine;//All Books must have 16 runes to run properly!!;//Be sure to stock Regs before playing!;removelist 'Runes';removelist 'OreBook';@clearjournal;headmsg "Reminder: Have your regs stocked...";pause 200;headmsg 'About 100 of each recall reg...';if not @findalias 'Ore Storage';promptalias 'Ore Storage';endif;if not @findobject 'Ore1';promptalias 'Ore1';endif;if not @findobject 'Ore2';promptalias 'Ore2';endif;//if not @findobject 'Ore3';// promptalias 'Ore3';//endif;if not @findobject 'HomeOre';promptalias 'HomeOre';endif;if not listexists 'OreBook';createlist 'OreBook';endif;if list 'OreBook' == 0;pushlist 'OreBook' 'Ore1';pushlist 'OreBook' 'Ore2';// pushlist 'OreBook' 'Ore3';endif;if @findtype '0xe86' '0' 'backpack' 'any' '2';headmsg 'Pick found. Ready!';elseif @findtype '0x1bf2' '0' 'backpack' 'any' '2' and skill 'tinkering' > 80;headmsg 'resorting to Tinkering....';@usetype '0x1eb8' '0' 'backpack' 'any' '2';waitforgump 0x38920abd 15000;replygump 0x38920abd 8;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;else;headmsg 'No way to mine found...';stop;endif;if not listexists 'Runes';createlist 'Runes';endif;if list 'Runes' == 0;pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to OreBook;for 0 to 'Runes';pause 500;while mana &lt; 20;endwhile;@clearjournal;pause 500;//useobject 0x40044e15;//waitforgump 0x59 15000;//replygump 0x59 50;useobject OreBook[];waitforgump 0x59 15000;replygump 0x59 Runes[];pause 4000;if injournal 'fail' 'system';@clearjournal;replay;endif;if injournal 'blocked' 'system';@clearjournal;replay;endif;while not @injournal 'There is no metal here to mine' 'system';//use Pick to northern tile until specified weight is reached;pause 300;usetype '0xe86' '0' 'backpack' 'any' '2';waitfortarget 1000;targettileoffset 0 -1 0;pause 800;if @injournal "You can't mine there." "system";headmsg 'Bad Rune';@clearjournal;poplist 'Runes' 'front';break;endif;// once weight is reached go home, if getting overweight, lower it;if weight > '325';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg '첫번쨰';if @injournal 'The spell fizzles.' 'Fizzles.';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg'리콜실패후 재리콜';replay;endif;if @injournal 'destination not found.' 'destination';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg'리콜실패후 재리콜';endif;if injournal 'fizzles' 'spell';@clearjournal;replay;endif;//put up Ore;organizer 'IngotShift';while @findtype '0x19b9' 'any' 'backpack' 'any' '2';moveitem 'found' 'Ore Storage';pause 800;endwhile;while mana &lt; 40;endwhile;//recall back to where you were;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 2000;endif;if not @findtype '0xe86' '0' 'backpack' 'any' '2';headmsg 'Out of picks';replay;endif;endwhile;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;endfor;poplist 'Runes' 'front';endfor;//recall home so Ore container is found;pause 1000;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;cast 'recall';autotargetobject 'HomeOre';pause 4000;poplist 'OreBook' 'front';</macro>
+  <macro interrupt="True" loop="True" name="6">//Author: Experience;//Title: Recalling Miner;//Description: Recalling Miner. Must have a 1 Pickaxe or ingots.;//You will need a book with the default rune marked right next to your storage.;//Stand South of each Spot you want to mine;//All Books must have 16 runes to run properly!!;//Be sure to stock Regs before playing!;removelist 'Runes';removelist 'OreBook';@clearjournal;headmsg "Reminder: Have your regs stocked...";pause 200;headmsg 'About 100 of each recall reg...';if not @findalias 'Ore Storage';promptalias 'Ore Storage';endif;if not @findobject 'Ore1';promptalias 'Ore1';endif;if not @findobject 'Ore2';promptalias 'Ore2';endif;//if not @findobject 'Ore3';// promptalias 'Ore3';//endif;if not @findobject 'HomeOre';promptalias 'HomeOre';endif;if not listexists 'OreBook';createlist 'OreBook';endif;if list 'OreBook' == 0;pushlist 'OreBook' 'Ore1';pushlist 'OreBook' 'Ore2';// pushlist 'OreBook' 'Ore3';endif;if @findtype '0xe86' '0' 'backpack' 'any' '2';headmsg 'Pick found. Ready!';elseif @findtype '0x1bf2' '0' 'backpack' 'any' '2' and skill 'tinkering' > 80;headmsg 'resorting to Tinkering....';@usetype '0x1eb8' '0' 'backpack' 'any' '2';waitforgump 0x38920abd 15000;replygump 0x38920abd 8;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;waitforgump 0x38920abd 15000;replygump 0x38920abd 114;else;headmsg 'No way to mine found...';stop;endif;if not listexists 'Runes';createlist 'Runes';endif;if list 'Runes' == 0;pushlist 'Runes' 50;pushlist 'Runes' 51;pushlist 'Runes' 52;pushlist 'Runes' 53;pushlist 'Runes' 54;pushlist 'Runes' 55;pushlist 'Runes' 56;pushlist 'Runes' 57;pushlist 'Runes' 58;pushlist 'Runes' 59;pushlist 'Runes' 60;pushlist 'Runes' 61;pushlist 'Runes' 62;pushlist 'Runes' 63;pushlist 'Runes' 64;pushlist 'Runes' 65;endif;for 0 to OreBook;for 0 to 'Runes';pause 500;while mana &lt; 20;endwhile;@clearjournal;pause 500;//useobject 0x40044e15;//waitforgump 0x59 15000;//replygump 0x59 50;useobject OreBook[];waitforgump 0x59 15000;replygump 0x59 Runes[];pause 4000;if injournal 'fail' 'system';@clearjournal;replay;endif;if injournal 'blocked' 'system';@clearjournal;replay;endif;while not @injournal 'There is no metal here to mine' 'system';//use Pick to northern tile until specified weight is reached;pause 300;usetype '0xe86' '0' 'backpack' 'any' '2';waitfortarget 1000;targettileoffset 0 -1 0;pause 800;if @injournal "You can't mine there." "system";headmsg 'Bad Rune';@clearjournal;poplist 'Runes' 'front';break;endif;// once weight is reached go home, if getting overweight, lower it;if weight > '325';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg '첫번쨰';if @injournal 'The spell fizzles.' 'Fizzles.';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg'리콜실패후 재리콜';replay;endif;if @injournal 'destination not found.' 'destination';cast "Recall";waitfortarget 15000;target! 0x40051122;pause 4000;msg'리콜실패후 재리콜';endif;if injournal 'fizzles' 'spell';@clearjournal;replay;endif;//put up Ore;organizer 'IngotShift';while @findtype '0x19b9' 'any' 'backpack' 'any' '2';moveitem 'found' 'Ore Storage';pause 800;endwhile;while mana &lt; 40;endwhile;//recall back to where you were;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;useobject OreBook[];waitforgump 0x554b87f3 5000;replygump 0x554b87f3 Runes[];pause 2000;endif;if not @findtype '0xe86' '0' 'backpack' 'any' '2';headmsg 'Out of picks';replay;endif;endwhile;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;endfor;poplist 'Runes' 'front';endfor;//recall home so Ore container is found;pause 1000;if mana &lt; 25;headmsg 'Need mana';useskill 'meditation';while mana &lt; 40;endwhile;endif;cast 'recall';autotargetobject 'HomeOre';pause 4000;poplist 'OreBook' 'front';</macro>
+ </macros>
+ <autoloot>
+  <enabled>False</enabled>
+  <container>0xffffffff</container>
+  <guards>False</guards>
+ </autoloot>
+ <spellgrid/>
+ <organizer>
+  <group loop="False" name="IngotShift" source="0x40044d54" stack="True" complete="True" target="0x40044e56">
+   <item graphic="0x19b9" amount="0x0"/>
+   <item graphic="0x19ba" amount="0x0"/>
+   <item graphic="0x19b8" amount="0x0"/>
+   <item graphic="0x19b8" amount="0x0"/>
+   <item graphic="0x19b7" amount="0x0"/>
+  </group>
+  <group loop="False" name="TrashShift" source="0x40044d54" stack="True" complete="True" target="0x40048d7a">
+   <item graphic="0xfbb" amount="0x0"/>
+   <item graphic="0xf39" amount="0x0"/>
+   <item graphic="0x1eb8" amount="0x0"/>
+  </group>
+  <group loop="False" name="OreShift" source="0x40044d54" stack="True" complete="True" target="0x40044e56">
+   <item graphic="0x19b9" amount="0x0"/>
+   <item graphic="0x19b7" amount="0x0"/>
+   <item graphic="0x19ba" amount="0x0"/>
+   <item graphic="0x19b8" amount="0x0"/>
+  </group>
+ </organizer>
+ <vendors>
+  <buystate list="" enabled="False"/>
+  <sellstate list="" enabled="False"/>
+ </vendors>
+</profile>
