@@ -11,7 +11,7 @@
  <data name="ForceResolution">False</data>
  <data name="GameWindowWidth">0x320</data>
  <data name="GameWindowHeight">0x258</data>
- <data name="FilterLight">False</data>
+ <data name="FilterLight">True</data>
  <data name="FilterMusic">False</data>
  <data name="FilterBardsMusic">False</data>
  <data name="FilterSound">False</data>
@@ -78,6 +78,18 @@
  <data name="AutoSearchContainers">False</data>
  <data name="AutoAcceptParty">False</data>
  <data name="StaticFieldsMode">0x0</data>
+ <counters>
+  <counter name="Blood Moss" enabled="True" image="True" graphic="0xf7b" color="0x0" format="cntr"/>
+  <counter name="Mandrake Root" enabled="True" image="True" graphic="0xf86" color="0x0" format="cntr-2"/>
+  <counter name="Spiders' Silk" enabled="True" image="True" graphic="0xf8d" color="0x0" format="cntr-3"/>
+  <counter name="Sulfurous Ash" enabled="True" image="True" graphic="0xf8c" color="0x0" format="cntr-4"/>
+  <counter name="Ginseng" enabled="True" image="True" graphic="0xf85" color="0x0" format="cntr-5"/>
+  <counter name="Nightshade" enabled="True" image="True" graphic="0xf88" color="0x0" format="cntr-6"/>
+  <counter name="Black Pearl" enabled="True" image="True" graphic="0xf7a" color="0x0" format="cntr-7"/>
+  <counter name="Garlic" enabled="True" image="True" graphic="0xf84" color="0x0" format="cntr-8"/>
+  <counter name="blank scroll" enabled="True" image="True" graphic="0xef3" color="0x0" format="cntr-9"/>
+  <counter name="pen and ink" enabled="True" image="True" graphic="0xfbf" color="0x0" format="cntr-10"/>
+ </counters>
  <scavenger enabled="False"/>
  <autosearchexemptions/>
  <objects>
@@ -107,55 +119,51 @@
   <container>0xffffffff</container>
   <guards>False</guards>
  </autoloot>
+ <spellgrid/>
  <organizer>
-  <group name="fullbook" target="0x4001b02a" stack="True" complete="True" source="0x40038a52" loop="False">
-   <item graphic="0xf85" amount="0x32"/>
-   <item graphic="0xf8c" amount="0x32"/>
-   <item graphic="0xf86" amount="0x32"/>
-   <item graphic="0xf8d" amount="0x32"/>
-   <item graphic="0xf84" amount="0x32"/>
-   <item graphic="0xf7a" amount="0x32"/>
-   <item graphic="0xf88" amount="0x32"/>
-   <item graphic="0xf7b" amount="0x32"/>
-   <item graphic="0xef3" amount="0x32"/>
+  <group name="fullbook" target="0x4001b02a" complete="True" source="0x40038a52" stack="True" loop="False">
+   <item amount="0x32" graphic="0xf85"/>
+   <item amount="0x32" graphic="0xf8c"/>
+   <item amount="0x32" graphic="0xf86"/>
+   <item amount="0x32" graphic="0xf8d"/>
+   <item amount="0x32" graphic="0xf84"/>
+   <item amount="0x32" graphic="0xf7a"/>
+   <item amount="0x32" graphic="0xf88"/>
+   <item amount="0x32" graphic="0xf7b"/>
+   <item amount="0x32" graphic="0xef3"/>
   </group>
-  <group name="final-scri" target="0x40066832" stack="True" complete="True" source="0x4001b02a" loop="False">
-   <item graphic="0x1f51" amount="0x0"/>
-   <item graphic="0x1f54" amount="0x0"/>
-   <item graphic="0x1f51" amount="0x0"/>
+  <group name="final-scri" target="0x40066832" complete="True" source="0x4001b02a" stack="True" loop="False">
+   <item amount="0x0" graphic="0x1f51"/>
+   <item amount="0x0" graphic="0x1f54"/>
+   <item amount="0x0" graphic="0x1f51"/>
   </group>
-  <group name="Restock Pen" target="0x4001b02a" stack="False" complete="False" source="0x4001b02f" loop="False">
-   <item graphic="0xfbf" amount="0x3"/>
+  <group name="Restock Pen" target="0x4001b02a" complete="False" source="0x4001b02f" stack="False" loop="False">
+   <item amount="0x3" graphic="0xfbf"/>
   </group>
-  <group name="fullbook" target="0x2" stack="False" complete="False" source="0x40024d58" loop="False"/>
-  <group name="regeaorg" target="0x4006135f" stack="True" complete="True" source="0x4001b02a" loop="False">
-   <item graphic="0xf8c" amount="0x0"/>
-   <item graphic="0xf7b" amount="0x0"/>
-   <item graphic="0xf84" amount="0x0"/>
-   <item graphic="0xf7a" amount="0x0"/>
-   <item graphic="0xf8c" amount="0x0"/>
-   <item graphic="0x1f2f" amount="0x0"/>
-   <item graphic="0xf88" amount="0x0"/>
-   <item graphic="0xf85" amount="0x0"/>
-   <item graphic="0xf86" amount="0x0"/>
-   <item graphic="0xf8d" amount="0x0"/>
+  <group name="fullbook" target="0x2" complete="False" source="0x40024d58" stack="False" loop="False"/>
+  <group name="regeaorg" target="0x4006135f" complete="True" source="0x4001b02a" stack="True" loop="False">
+   <item amount="0x0" graphic="0xf8c"/>
+   <item amount="0x0" graphic="0xf7b"/>
+   <item amount="0x0" graphic="0xf84"/>
+   <item amount="0x0" graphic="0xf7a"/>
+   <item amount="0x0" graphic="0xf8c"/>
+   <item amount="0x0" graphic="0x1f2f"/>
+   <item amount="0x0" graphic="0xf88"/>
+   <item amount="0x0" graphic="0xf85"/>
+   <item amount="0x0" graphic="0xf86"/>
+   <item amount="0x0" graphic="0xf8d"/>
   </group>
  </organizer>
- <spellgrid/>
  <vendors>
-  <buystate enabled="False" list=""/>
+  <buystate enabled="False" list="Buy-1"/>
   <sellstate enabled="False" list=""/>
+  <shoppinglist name="Buy-1" complete="False" type="Buy" limit="999">
+   <item amount="999" graphic="0xf88"/>
+   <item amount="999" graphic="0xf7b"/>
+   <item amount="999" graphic="0xf7a"/>
+   <item amount="888" graphic="0xf86"/>
+   <item amount="999" graphic="0xef3"/>
+   <item amount="999" graphic="0xf8c"/>
+  </shoppinglist>
  </vendors>
- <counters>
-  <counter color="0x0" name="Blood Moss" enabled="True" graphic="0xf7b" image="True" format="cntr"/>
-  <counter color="0x0" name="Mandrake Root" enabled="True" graphic="0xf86" image="True" format="cntr-2"/>
-  <counter color="0x0" name="Spiders' Silk" enabled="True" graphic="0xf8d" image="True" format="cntr-3"/>
-  <counter color="0x0" name="Sulfurous Ash" enabled="True" graphic="0xf8c" image="True" format="cntr-4"/>
-  <counter color="0x0" name="Ginseng" enabled="True" graphic="0xf85" image="True" format="cntr-5"/>
-  <counter color="0x0" name="Nightshade" enabled="True" graphic="0xf88" image="True" format="cntr-6"/>
-  <counter color="0x0" name="Black Pearl" enabled="True" graphic="0xf7a" image="True" format="cntr-7"/>
-  <counter color="0x0" name="Garlic" enabled="True" graphic="0xf84" image="True" format="cntr-8"/>
-  <counter color="0x0" name="blank scroll" enabled="True" graphic="0xef3" image="True" format="cntr-9"/>
-  <counter color="0x0" name="pen and ink" enabled="True" graphic="0xfbf" image="True" format="cntr-10"/>
- </counters>
 </profile>

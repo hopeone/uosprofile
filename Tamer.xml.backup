@@ -26,7 +26,7 @@
  <data name="FilterRewardGump">False</data>
  <data name="HandsBeforePotions">False</data>
  <data name="HandsBeforeCasting">False</data>
- <data name="SmartTarget">0x0</data>
+ <data name="SmartTarget">0x2</data>
  <data name="SmartTargetRange">False</data>
  <data name="SmartTargetRangeValue">0xc</data>
  <data name="HighlightCurrentTarget">True</data>
@@ -63,7 +63,7 @@
  <data name="MoveConflictingItems">False</data>
  <data name="CustomCaption">True</data>
  <data name="CustomCaptionMode">0x1</data>
- <data name="CustomCaptionText">UO - $name $statusbar - $hits/$mana/$stam %cntr-4 %cntr-3 %cntr-2 %cntr  %cntr-7 %cntr-6  %cntr-5</data>
+ <data name="CustomCaptionText">UO - $name $statusbar - $hits/$mana/$stam  %cntr-5</data>
  <data name="WarnCounters">True</data>
  <data name="WarnCountersValue">0x5</data>
  <data name="HighlightReagents">True</data>
@@ -78,19 +78,9 @@
  <data name="AutoSearchContainers">False</data>
  <data name="AutoAcceptParty">False</data>
  <data name="StaticFieldsMode">0x0</data>
- <counters>
-  <counter format="cntr" name="Sulfurous Ash" graphic="0xf8c" image="True" enabled="True" color="0x0"/>
-  <counter format="cntr-2" name="Garlic" graphic="0xf84" image="True" enabled="True" color="0x0"/>
-  <counter format="cntr-3" name="Spiders' Silk" graphic="0xf8d" image="True" enabled="True" color="0x0"/>
-  <counter format="cntr-4" name="Mandrake Root" graphic="0xf86" image="True" enabled="True" color="0x0"/>
-  <counter format="cntr-5" name="clean bandage" graphic="0xe21" image="True" enabled="True" color="0x0"/>
-  <counter format="cntr-6" name="Black Pearl" graphic="0xf7a" image="True" enabled="True" color="0x0"/>
-  <counter format="cntr-7" name="Blood Moss" graphic="0xf7b" image="True" enabled="True" color="0x0"/>
- </counters>
  <scavenger enabled="False"/>
  <autosearchexemptions/>
  <objects>
-  <obj name="found">0x3d3e</obj>
   <obj name="o">0x4006864f</obj>
   <obj name="pet1">0x3d3e</obj>
   <obj name="pet2">0xb689</obj>
@@ -99,46 +89,50 @@
   <obj name="pet5">0xb68a</obj>
  </objects>
  <hotkeys>
-  <hotkey action="macro.play" param="kill" key="0x78" pass="False"/>
-  <hotkey action="macro.play" param="follow" key="0x79" pass="False"/>
-  <hotkey action="macro.play" param="stay" key="0x7b" pass="False"/>
-  <hotkey action="macro.play" param="guard" key="0x7a" pass="False"/>
-  <hotkey action="macro.play" param="pet heal" key="0x76" pass="False"/>
-  <hotkey action="spells.magery.greaterheal" key="0x70" pass="False"/>
-  <hotkey action="spells.magery.paralyze" key="0x73" pass="False"/>
-  <hotkey action="spells.magery.poison" key="0x71" pass="False"/>
-  <hotkey action="actions.shownames.all" key="0xbe" pass="False"/>
-  <hotkey action="combat.bandage.target" key="0x74" pass="False"/>
-  <hotkey action="spells.magery.invisibility" key="0x77" pass="False"/>
-  <hotkey action="skills.animaltaming" key="0x431" pass="False"/>
-  <hotkey action="skills.discordance" key="0x75" pass="False"/>
-  <hotkey action="spells.magery.lightning" key="0x72" pass="False"/>
+  <hotkey key="0x78" action="macro.play" pass="False" param="kill"/>
+  <hotkey key="0x79" action="macro.play" pass="False" param="follow"/>
+  <hotkey key="0x7b" action="macro.play" pass="False" param="stay"/>
+  <hotkey key="0x7a" action="macro.play" pass="False" param="guard"/>
+  <hotkey key="0x76" action="macro.play" pass="False" param="get enemy"/>
+  <hotkey key="0x70" action="spells.magery.greaterheal" pass="False"/>
+  <hotkey key="0x73" action="spells.magery.paralyze" pass="False"/>
+  <hotkey key="0x71" action="spells.magery.poison" pass="False"/>
+  <hotkey key="0xbe" action="actions.shownames.all" pass="False"/>
+  <hotkey key="0x74" action="combat.bandage.target" pass="False"/>
+  <hotkey key="0x433" action="spells.magery.invisibility" pass="False"/>
+  <hotkey key="0x431" action="skills.animaltaming" pass="False"/>
+  <hotkey key="0x75" action="skills.discordance" pass="False"/>
+  <hotkey key="0x0" action="spells.magery.lightning" pass="False"/>
+  <hotkey key="0x432" action="spells.magery.cure" pass="False"/>
+  <hotkey key="0x77" action="skills.provocation" pass="False"/>
+  <hotkey key="0x72" action="spells.magery.energybolt" pass="False"/>
  </hotkeys>
  <macros>
-  <macro loop="False" name="kill" interrupt="True">msg 'all kill';</macro>
-  <macro loop="False" name="follow" interrupt="True">msg 'all follow me';msg 1;</macro>
-  <macro loop="False" name="stay" interrupt="True">msg 'all stay';</macro>
-  <macro loop="False" name="guard" interrupt="True">msg 'all guard me';</macro>
-  <macro loop="True" name="pet heal" interrupt="True"></macro>
-  <macro loop="False" name="loot" interrupt="True">//you need dagger and scissors in backpack;//auto loot may not work on your server !;//also loots feather's and gold;if not @findtype '0x2006' 'any' 'ground' '1' '2';sysmsg ' ******No Corpse Found******' '28';stop;else;@setalias! 'o' 'found';endif;if not @findtype '0xec4' 'any' 'backpack';sysmsg '*****No dagger*****' '25';stop;else;@usetype! '0xec4' 'any' 'backpack';waitfortarget '5000';target! 'o';pause 600;endif;if @findtype! '0x1079' 'any' 'o' 'any' '2';@movetype '0x1079' 'o' 'backpack';pause 2000;@usetype! '0xf9f' 'any' 'backpack';waitfortarget '2000';targettype '0x1079' 'any' 'backpack';pause 600;endif;if @findtype! '0x1bd1' 'any' 'o' 'any' '2';@movetype '0x1bd1' 'o' 'backpack';pause 1000;endif;if @findtype! '0xeed' 'any' 'o' 'any' '2';@movetype '0xeed' 'o' 'backpack';pause 1000;endif;if @findtype! '0xf26' 'any' 'o' 'any' '2';@movetype '0xf26' 'o' 'backpack';pause 1000;endif;ignoreobject 'o';sysmsg 'Corpse Now Ignored' '25';pause '1500';</macro>
-  <macro loop="True" name="peacetraining" interrupt="True">useskill 'peacemaking';pause 10000;</macro>
-  <macro loop="True" name="asdf" interrupt="True">useskill 'Discordance';pause 1000;useonce 0xe9d;</macro>
-  <macro loop="True" name="veterinarytrain" interrupt="True">@cleartargetqueue;@clearjournal;if dead 'self';stop;endif;//Setup;if not findalias 'pet1';headmsg 'Select first pet';promptalias 'pet1';endif;if not findalias 'pet2';headmsg 'Select second pet';promptalias 'pet2';endif;if not findalias 'pet3';headmsg 'Select third pet';promptalias 'pet3';endif;if not findalias 'pet4';headmsg 'Select fourth pet';promptalias 'pet4';endif;if not findalias 'pet5';headmsg 'Select fifth pet';promptalias 'pet5';endif;//Heal them to full;//pet 1;if hits 'pet1' == 0;bandage;autotargetobject 'pet1';pause 7600;endif;if hits 'pet2' == 0;bandage;autotargetobject 'pet2';pause 7600;endif;if hits 'pet3' == 0;bandage;autotargetobject 'pet3';pause 7600;endif;if hits 'pet4' == 0;bandage;autotargetobject 'pet4';pause 7600;endif;if hits 'pet5' == 0;bandage;autotargetobject 'pet5';pause 7600;endif;if diffhits 'pet1' > '0';if diffhits 'pet1' > diffhits 'pet2';if diffhits 'pet1' > diffhits 'pet3';if diffhits 'pet1' > diffhits 'pet4';if diffhits 'pet1' > diffhits 'pet5';if inrange 'pet1' 1;bandage;autotargetobject 'pet1';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;//pet 2;if diffhits 'pet2' > '0';if diffhits 'pet2' > diffhits 'pet1';if diffhits 'pet2' > diffhits 'pet3';if diffhits 'pet2' > diffhits 'pet4';if diffhits 'pet2' > diffhits 'pet5';if inrange 'pet2' 1;bandage;autotargetobject 'pet2';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;//pet 3;if not diffhits 'pet3' == '0';if diffhits 'pet3' > diffhits 'pet1';if diffhits 'pet3' > diffhits 'pet2';if diffhits 'pet3' > diffhits 'pet4';if diffhits 'pet3' > diffhits 'pet5';if inrange 'pet3' 1;bandage;autotargetobject 'pet3';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not diffhits 'pet4' == '0';if diffhits 'pet4' > diffhits 'pet2';if diffhits 'pet4' > diffhits 'pet3';if diffhits 'pet4' > diffhits 'pet1';if diffhits 'pet4' > diffhits 'pet5';if inrange 'pet4' 1;bandage;autotargetobject 'pet4';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not diffhits 'pet5' == '0';if diffhits 'pet5' > diffhits 'pet2';if diffhits 'pet5' > diffhits 'pet3';if diffhits 'pet5' > diffhits 'pet1';if diffhits 'pet5' > diffhits 'pet4';if inrange 'pet5' 1;bandage;autotargetobject 'pet5';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not @injournal 'finish' 'system';pause 1100;replay;else if @injournal 'finish' 'system';@clearjournal;replay;elseif @injournal 'too far away' 'system';@clearjournal;replay;elseif @injournal 'stay close enough' 'system';@clearjournal;replay;endif;</macro>
-  <macro loop="True" name="peacetr" interrupt="True">useobject 0x4037e5bf;pause 2000;</macro>
-  <macro loop="True" name="discotra" interrupt="True">for 9999;pause 1000;useonce 0xe9d;usetype 0xe9d;createtimer 'CCWW';settimer 'CCDWW' 0;for 12;usetype 0xe9d  // 사용 악기 object type 확인하시어 올리시기 바랍니다.;useskill 'Discordance';waitfortarget 5000;target usetype 0xe9d;getenemy 'murderer''grey''innocent' 'criminal';if targetexists 'harmful' and inrange 'enemy' 10;target! 'enemy';endif;if targetexists 'server' and inrange 'enemy' 10;target! 'enemy';endif;pause 2000;if timer 'CCWW' > 9000  // 대상의 개체 수 , 대상의 바딩 난이도에 따라서 조절할 것!;cast "Invisibility";waitfortarget 15000;target! 'self';pause 18000;settimer 'CCWW' 0;endif;endfor;cast "Invisibility";waitfortarget 15000;target! 'self';pause 18000;//  cast "Invisibility";// waitfortarget 15000;// target! 'self';//pause 18000;endfor;</macro>
-  <macro loop="True" name="tramagery" interrupt="True">////////////////////////////////////;// This macro is designed for //;// training both magery and //;// resist from 30. It is intended //;// for characters with 40+ //;// intelligence. //;// //;// Turn on loop and click play! //;////////////////////////////////////;if skill 'magery' &lt; 100;if @injournal 'insufficient mana';clearjournal;useskill 'meditation';while mana &lt; maxmana;endwhile;else;if skill 'magery' &lt; 30;cast 'bless' 'self';pause 1000;elseif skill 'magery' &lt; 45;cast 'bless' 'self';pause 1000;elseif skill 'magery' &lt; 55;cast 'mana drain' 'self';pause 1000;elseif skill 'magery' &lt; 75;cast 'invisibility' 'self';pause 1000;elseif skill 'magery' &lt; 100;cast 'mana vampire' 'self';pause 1000;else;headmsg 'Magery complete!';stop;endif;endif;elseif skill 'resisting spells' &lt; 100;if @injournal 'insufficient mana';clearjournal;useskill 'meditation';while mana &lt; maxmana;endwhile;else;cast 'mana vampire' 'self';pause 1000;endif;else;headmsg 'Magery and resisting spells complete!';stop;endif;</macro>
+  <macro interrupt="True" loop="False" name="kill">msg 'all kill';</macro>
+  <macro interrupt="True" loop="False" name="follow">msg 'all follow me';msg 1;</macro>
+  <macro interrupt="True" loop="False" name="stay">msg 'all stay';</macro>
+  <macro interrupt="True" loop="False" name="guard">msg 'all guard me';</macro>
+  <macro interrupt="True" loop="True" name="pet heal"></macro>
+  <macro interrupt="True" loop="False" name="loot">//you need dagger and scissors in backpack;//auto loot may not work on your server !;//also loots feather's and gold;if not @findtype '0x2006' 'any' 'ground' '1' '2';sysmsg ' ******No Corpse Found******' '28';stop;else;@setalias! 'o' 'found';endif;if not @findtype '0xec4' 'any' 'backpack';sysmsg '*****No dagger*****' '25';stop;else;@usetype! '0xec4' 'any' 'backpack';waitfortarget '5000';target! 'o';pause 600;endif;if @findtype! '0x1079' 'any' 'o' 'any' '2';@movetype '0x1079' 'o' 'backpack';pause 2000;@usetype! '0xf9f' 'any' 'backpack';waitfortarget '2000';targettype '0x1079' 'any' 'backpack';pause 600;endif;if @findtype! '0x1bd1' 'any' 'o' 'any' '2';@movetype '0x1bd1' 'o' 'backpack';pause 1000;endif;if @findtype! '0xeed' 'any' 'o' 'any' '2';@movetype '0xeed' 'o' 'backpack';pause 1000;endif;if @findtype! '0xf26' 'any' 'o' 'any' '2';@movetype '0xf26' 'o' 'backpack';pause 1000;endif;ignoreobject 'o';sysmsg 'Corpse Now Ignored' '25';pause '1500';</macro>
+  <macro interrupt="True" loop="True" name="peacetraining">useskill 'peacemaking';pause 10000;</macro>
+  <macro interrupt="True" loop="True" name="asdf">useskill animaltaiming;waitfortarget 15000;target! 0xe310;</macro>
+  <macro interrupt="True" loop="True" name="veterinarytrain">@cleartargetqueue;@clearjournal;if dead 'self';stop;endif;//Setup;if not findalias 'pet1';headmsg 'Select first pet';promptalias 'pet1';endif;if not findalias 'pet2';headmsg 'Select second pet';promptalias 'pet2';endif;if not findalias 'pet3';headmsg 'Select third pet';promptalias 'pet3';endif;if not findalias 'pet4';headmsg 'Select fourth pet';promptalias 'pet4';endif;if not findalias 'pet5';headmsg 'Select fifth pet';promptalias 'pet5';endif;//Heal them to full;//pet 1;if hits 'pet1' == 0;bandage;autotargetobject 'pet1';pause 7600;endif;if hits 'pet2' == 0;bandage;autotargetobject 'pet2';pause 7600;endif;if hits 'pet3' == 0;bandage;autotargetobject 'pet3';pause 7600;endif;if hits 'pet4' == 0;bandage;autotargetobject 'pet4';pause 7600;endif;if hits 'pet5' == 0;bandage;autotargetobject 'pet5';pause 7600;endif;if diffhits 'pet1' > '0';if diffhits 'pet1' > diffhits 'pet2';if diffhits 'pet1' > diffhits 'pet3';if diffhits 'pet1' > diffhits 'pet4';if diffhits 'pet1' > diffhits 'pet5';if inrange 'pet1' 1;bandage;autotargetobject 'pet1';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;//pet 2;if diffhits 'pet2' > '0';if diffhits 'pet2' > diffhits 'pet1';if diffhits 'pet2' > diffhits 'pet3';if diffhits 'pet2' > diffhits 'pet4';if diffhits 'pet2' > diffhits 'pet5';if inrange 'pet2' 1;bandage;autotargetobject 'pet2';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;//pet 3;if not diffhits 'pet3' == '0';if diffhits 'pet3' > diffhits 'pet1';if diffhits 'pet3' > diffhits 'pet2';if diffhits 'pet3' > diffhits 'pet4';if diffhits 'pet3' > diffhits 'pet5';if inrange 'pet3' 1;bandage;autotargetobject 'pet3';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not diffhits 'pet4' == '0';if diffhits 'pet4' > diffhits 'pet2';if diffhits 'pet4' > diffhits 'pet3';if diffhits 'pet4' > diffhits 'pet1';if diffhits 'pet4' > diffhits 'pet5';if inrange 'pet4' 1;bandage;autotargetobject 'pet4';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not diffhits 'pet5' == '0';if diffhits 'pet5' > diffhits 'pet2';if diffhits 'pet5' > diffhits 'pet3';if diffhits 'pet5' > diffhits 'pet1';if diffhits 'pet5' > diffhits 'pet4';if inrange 'pet5' 1;bandage;autotargetobject 'pet5';pause 5200;endif;endif;endif;endif;endif;endif;@cleartargetqueue;if not @injournal 'finish' 'system';pause 1100;replay;else if @injournal 'finish' 'system';@clearjournal;replay;elseif @injournal 'too far away' 'system';@clearjournal;replay;elseif @injournal 'stay close enough' 'system';@clearjournal;replay;endif;</macro>
+  <macro interrupt="True" loop="True" name="peacetr">//usetype '0xe9d' 'backpack';//useskill "Peacemaking";//usetype (graphic) [color] [source] [range or search level];//useobject 0x4037e5bf;usetype '0xe9d' 'backpack';pause 2000;msg 1;</macro>
+  <macro interrupt="True" loop="True" name="discotra">for 9999;pause 1000;useonce 0xe9d;usetype 0xe9d;createtimer 'CCWW';settimer 'CCDWW' 0;for 12;usetype 0xe9d  // 사용 악기 object type 확인하시어 올리시기 바랍니다.;useskill 'Discordance';waitfortarget 5000;target usetype 0xe9d;getenemy 'murderer''grey''innocent' 'criminal';if targetexists 'harmful' and inrange 'enemy' 10;target! 'enemy';endif;if targetexists 'server' and inrange 'enemy' 10;target! 'enemy';endif;pause 2000;if timer 'CCWW' > 9000  // 대상의 개체 수 , 대상의 바딩 난이도에 따라서 조절할 것!;cast "Invisibility";waitfortarget 15000;target! 'self';pause 18000;settimer 'CCWW' 0;endif;endfor;cast "Invisibility";waitfortarget 15000;target! 'self';pause 18000;//  cast "Invisibility";// waitfortarget 15000;// target! 'self';//pause 18000;endfor;</macro>
+  <macro interrupt="True" loop="True" name="tramagery">////////////////////////////////////;// This macro is designed for //;// training both magery and //;// resist from 30. It is intended //;// for characters with 40+ //;// intelligence. //;// //;// Turn on loop and click play! //;////////////////////////////////////;if skill 'magery' &lt; 100;if @injournal 'insufficient mana';clearjournal;useskill 'meditation';while mana &lt; maxmana;endwhile;else;if skill 'magery' &lt; 30;cast 'bless' 'self';pause 1000;elseif skill 'magery' &lt; 45;cast 'bless' 'self';pause 1000;elseif skill 'magery' &lt; 55;cast 'mana drain' 'self';pause 1000;elseif skill 'magery' &lt; 75;cast 'invisibility' 'self';pause 1000;elseif skill 'magery' &lt; 100;cast 'mana vampire' 'self';pause 1000;else;headmsg 'Magery complete!';stop;endif;endif;elseif skill 'resisting spells' &lt; 100;if @injournal 'insufficient mana';clearjournal;useskill 'meditation';while mana &lt; maxmana;endwhile;else;cast 'mana vampire' 'self';pause 1000;endif;else;headmsg 'Magery and resisting spells complete!';stop;endif;</macro>
+  <macro interrupt="True" loop="True" name="trataim">if skill! 'animal taming' >= 120;setskill 'animal taming' 'locked';stop;endif;@createlist 'pets';@clearlist 'pets';if skill 'animal taming' &lt; 72;pushlist 'pets' 0x5;pushlist 'pets' 0xd1;pushlist 'pets' 0xcb;pushlist 'pets' 0x122;pushlist 'pets' 0xed;pushlist 'pets' 0xe1;pushlist 'pets' 0xdc;pushlist 'pets' 0xcc;pushlist 'pets' 0xe2;pushlist 'pets' 0xe4;pushlist 'pets' 0xc8;pushlist 'pets' 0x3e9f;pushlist 'pets' 0x3ea0;pushlist 'pets' 0x3ea1;pushlist 'pets' 0x3ea2;pushlist 'pets' 0xe7;pushlist 'pets' 0xd8;pushlist 'pets' 0xa7;pushlist 'pets' 0xd3;pushlist 'pets' 0x3f;pushlist 'pets' 0xd4;pushlist 'pets' 0x1b;pushlist 'pets' 0x19;pushlist 'pets' 0x41;pushlist 'pets' 0x40;pushlist 'pets' 0xdd;pushlist 'pets' 0xd5;pushlist 'pets' 0xea;elseif skill 'animal taming' &lt; 95.1;// Gaman;pushlist 'pets' 0xf8;// Bull;pushlist 'pets' 0xe8;pushlist 'pets' 0xe9;// Great Hart;pushlist 'pets' 0xea;// White Wolf;pushlist 'pets' 0x25;pushlist 'pets' 0x22;// Snow Leopard;pushlist 'pets' 0x41;pushlist 'pets' 0x40;// Ridgeback;pushlist 'pets' 0xbb;else;// Bull;pushlist 'pets' 0xe8;pushlist 'pets' 0xe9;// Unicorn;pushlist 'pets' 0x7a;// Ki-rin;pushlist 'pets' 0x84;endif;if not listexists 'errors';createlist 'errors';pushlist 'errors' 'too many owners';pushlist 'errors' 'only be tamed by';pushlist 'errors' 'no chance of taming';pushlist 'errors' 'looks tame already';//pushlist 'errors' 'clear path to the animal';pushlist 'errors' 'cannot be seen';endif;@createlist 'unstuck';if list 'unstuck' == 0;pushlist 'unstuck' 'east';pushlist 'unstuck' 'west';pushlist 'unstuck' 'south';pushlist 'unstuck' 'north';endif;// Search;if not @findobject 'pet';for 0 to 'pets';if @findtype 'pets[]' 'any' 'ground';@settimer 'stuck' 0;@setalias 'pet' 'found';break;endif;endfor;else;// Pathfind;@settimer 'pathfind' 0;while @findobject 'pet' and not @inrange 'pet' 2;if dead;break;elseif @timer 'pathfind' >= 5000;// Diverge;if direction == 0;@poplist 'unstuck' 'north';elseif direction == 2;@poplist 'unstuck' 'east';elseif direction == 4;@poplist 'unstuck' 'south';elseif direction == 6;@poplist 'unstuck' 'west';endif;// Unstuck;if list 'unstuck' != 0;for 5;run 'unstuck[0]';pause 100;endfor;poplist 'unstuck' 'front';endif;break;elseif @x 'pet' > x 'self' and @y 'pet' > y 'self';run 'southeast';elseif @x 'pet' &lt; x 'self' and @y 'pet' > y 'self';run 'southwest';elseif @x 'pet' > x 'self' and @y 'pet' &lt; y 'self';run 'northeast';elseif @x 'pet' &lt; x 'self' and @y 'pet' &lt; y 'self';run 'northwest';elseif @x 'pet' > x 'self' and @y 'pet' == y 'self';run 'east';elseif @x 'pet' &lt; x 'self' and @y 'pet' == y 'self';run 'west';elseif @x 'pet' == x 'self' and @y 'pet' > y 'self';run 'south';elseif @x 'pet' == x 'self' and @y 'pet' &lt; y 'self';run 'north';endif;pause 100;endwhile;if @inrange 'pet' 3;// Tame;clearjournal;useskill 'animal taming';waitfortarget 1000;target! 'pet';// Handle;if @property '(tame)' 'pet';for 5;if @gumpexists 0x909cc741 or not @findobject 'pet';break;elseif dead or followers == 0;break;elseif @name 'pet' != 'trashpet';rename 'pet' 'trashpet';else;msg 'trashpet release';endif;pause 500;endfor;replygump 0x909cc741 2;sysmsg 'Success: tamed and released!' 88;ignoreobject 'pet';@unsetalias 'pet';else;@settimer 'stuck' 0;for 0 to 'errors';if @injournal 'errors[]''system';sysmsg 'Ignore: error message!' 25;ignoreobject 'pet';@unsetalias 'pet';break;endif;endfor;endif;elseif @timer 'stuck' >= 20000;sysmsg 'Ignore: stuck timeout!' 25;ignoreobject 'pet';@unsetalias 'pet';endif;endif;</macro>
+  <macro interrupt="True" loop="False" name="get enemy">//for monsters, drops loaded spell and makes them your 'last';getenemy 'gray' 'criminal' 'closest';if targetexists 'harmful' and inrange 'enemy' 10;target! 'enemy';endif;if targetexists 'server' and inrange 'enemy' 10;target! 'enemy';endif;</macro>
  </macros>
  <autoloot>
   <enabled>True</enabled>
-  <container>0x4001812a</container>
+  <container>0x40054770</container>
   <guards>False</guards>
  </autoloot>
- <spellgrid/>
  <organizer>
-  <group loop="False" stack="True" name="rune" target="0x40065c9d" complete="True" source="0x4001812a">
+  <group stack="True" target="0x4005b338" loop="False" name="rune" complete="True" source="0x40054770">
    <item graphic="0x1f14" amount="0x0"/>
   </group>
-  <group loop="False" stack="True" name="regent" target="0x40065c9b" complete="True" source="0x4001812a">
+  <group stack="True" target="0x40041795" loop="False" name="regent" complete="True" source="0x400014ab">
    <item graphic="0xf86" amount="0x0"/>
    <item graphic="0xf88" amount="0x0"/>
    <item graphic="0xf8c" amount="0x0"/>
@@ -148,14 +142,16 @@
    <item graphic="0xf85" amount="0x0"/>
    <item graphic="0xf84" amount="0x0"/>
   </group>
-  <group loop="False" stack="True" name="Organizer-3" target="0x4004ea57" complete="True" source="0x4001812a">
+  <group stack="True" target="0x40050454" loop="False" name="Organizer-3" complete="True" source="0x4001812a">
    <item graphic="0xe9d" amount="0x0"/>
+   <item graphic="0x1f14" amount="0x0"/>
   </group>
  </organizer>
+ <spellgrid/>
  <vendors>
-  <buystate list="scir-buy" enabled="True"/>
+  <buystate list="" enabled="False"/>
   <sellstate list="" enabled="False"/>
-  <shoppinglist limit="999" name="Buy-1" complete="False" type="Buy">
+  <shoppinglist limit="999" type="Buy" name="Buy-1" complete="False">
    <item graphic="0xf7b" amount="999"/>
    <item graphic="0xf88" amount="999"/>
    <item graphic="0xf8c" amount="999"/>
@@ -165,28 +161,38 @@
    <item graphic="0xf85" amount="999"/>
    <item graphic="0xf8d" amount="999"/>
   </shoppinglist>
-  <shoppinglist limit="999" name="scir-buy" complete="False" type="Buy">
+  <shoppinglist limit="999" type="Buy" name="scir-buy" complete="False">
    <item graphic="0xf7a" amount="999"/>
    <item graphic="0xf7b" amount="999"/>
   </shoppinglist>
  </vendors>
- <dresslist name="regen" container="0x40065c9d">
-  <item layer="8">0x400426d3</item>
-  <item layer="14">0x4004cfc3</item>
-  <item layer="6">0x400427cf</item>
-  <item layer="19">0x4006612b</item>
-  <item layer="10">0x40030c5b</item>
-  <item layer="4">0x400582cf</item>
-  <item layer="22">0x4003ce0a</item>
-  <item layer="13">0x4004d037</item>
+ <counters>
+  <counter format="cntr" graphic="0xf8c" image="True" name="Sulfurous Ash" enabled="True" color="0x0"/>
+  <counter format="cntr-2" graphic="0xf84" image="True" name="Garlic" enabled="True" color="0x0"/>
+  <counter format="cntr-3" graphic="0xf8d" image="True" name="Spiders' Silk" enabled="True" color="0x0"/>
+  <counter format="cntr-4" graphic="0xf86" image="True" name="Mandrake Root" enabled="True" color="0x0"/>
+  <counter format="cntr-5" graphic="0xe21" image="True" name="clean bandage" enabled="True" color="0x0"/>
+  <counter format="cntr-6" graphic="0xf7a" image="True" name="Black Pearl" enabled="True" color="0x0"/>
+  <counter format="cntr-7" graphic="0xf7b" image="True" name="Blood Moss" enabled="True" color="0x0"/>
+ </counters>
+ <dresslist container="0x0" name="discoset"/>
+ <dresslist container="0x40065c9d" name="regen">
+  <item layer="8">0x400548c2</item>
+  <item layer="14">0x40054848</item>
+  <item layer="6">0x400549cc</item>
+  <item layer="19">0x400549cf</item>
+  <item layer="7">0x4005332d</item>
+  <item layer="10">0x40053331</item>
+  <item layer="4">0x400549cd</item>
+  <item layer="13">0x400549cb</item>
  </dresslist>
- <dresslist name="discoset" container="0x0"/>
- <dresslist name="taim" container="0x0">
+ <dresslist container="0x0" name="taim">
   <item layer="8">0x40042fb6</item>
-  <item layer="14">0x4004cfc3</item>
-  <item layer="6">0x400427cf</item>
+  <item layer="14">0x40068cbe</item>
+  <item layer="6">0x4004a8b1</item>
   <item layer="19">0x4006612b</item>
-  <item layer="10">0x40030c5b</item>
+  <item layer="7">0x400431e3</item>
+  <item layer="10">0x40068f60</item>
   <item layer="4">0x400582cf</item>
   <item layer="22">0x4003ce0a</item>
   <item layer="13">0x4004d037</item>

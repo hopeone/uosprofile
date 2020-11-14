@@ -78,21 +78,30 @@
  <data name="AutoSearchContainers">False</data>
  <data name="AutoAcceptParty">False</data>
  <data name="StaticFieldsMode">0x0</data>
+ <counters/>
  <scavenger enabled="False"/>
  <autosearchexemptions/>
  <objects/>
- <hotkeys/>
- <macros/>
+ <hotkeys>
+  <hotkey action="spells.bushido.confidence" pass="False" key="0x70"/>
+  <hotkey action="spells.bushido.lightningstrike" pass="False" key="0x71"/>
+ </hotkeys>
+ <macros>
+  <macro loop="True" name="d" interrupt="True">//movetype (graphic) (source) (destination) [(x y z)] [color] [amount] [range or search level];movetype '0x19b9' 'ground' 'backpack' '1';//moveitem 0x400517ab 'backpack' 136 95 0;pause 600;usetype '0x19b9' 0 'backpack';waitfortarget 15000;target! 0x4001436f;</macro>
+ </macros>
  <autoloot>
   <enabled>False</enabled>
   <container>0xffffffff</container>
   <guards>False</guards>
  </autoloot>
+ <organizer>
+  <group source="0x4001812a" loop="False" stack="True" name="Organizer-1" target="0x40050454" complete="True">
+   <item graphic="0x1f14" amount="0x0"/>
+  </group>
+ </organizer>
  <spellgrid/>
- <organizer/>
  <vendors>
   <buystate enabled="False" list=""/>
   <sellstate enabled="False" list=""/>
  </vendors>
- <counters/>
 </profile>

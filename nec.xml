@@ -78,6 +78,7 @@
  <data name="AutoSearchContainers">False</data>
  <data name="AutoAcceptParty">False</data>
  <data name="StaticFieldsMode">0x0</data>
+ <counters/>
  <scavenger enabled="False"/>
  <autosearchexemptions/>
  <objects/>
@@ -93,15 +94,14 @@
   <container>0xffffffff</container>
   <guards>False</guards>
  </autoloot>
- <spellgrid/>
  <organizer>
-  <group target="0x40050454" loop="False" name="Organizer-1" complete="True" source="0x4001812a" stack="True">
-   <item amount="0x0" graphic="0x1f14"/>
+  <group stack="True" complete="True" target="0x40050454" loop="False" source="0x4001812a" name="Organizer-1">
+   <item graphic="0x1f14" amount="0x0"/>
   </group>
  </organizer>
+ <spellgrid/>
  <vendors>
-  <buystate enabled="False" list=""/>
-  <sellstate enabled="False" list=""/>
+  <buystate list="" enabled="False"/>
+  <sellstate list="" enabled="False"/>
  </vendors>
- <counters/>
 </profile>

@@ -78,14 +78,6 @@
  <data name="AutoSearchContainers">False</data>
  <data name="AutoAcceptParty">False</data>
  <data name="StaticFieldsMode">0x0</data>
- <counters>
-  <counter graphic="0xf39" name="shovel" color="0x0" format="cntr" enabled="True" image="True"/>
-  <counter graphic="0x1eb8" name="tool kit" color="0x0" format="cntr-2" enabled="True" image="True"/>
-  <counter graphic="0x1bf2" name="ingots" color="0x0" format="cntr-3" enabled="True" image="True"/>
-  <counter graphic="0xf7b" name="Blood Moss" color="0x0" format="cntr-4" enabled="True" image="True"/>
-  <counter graphic="0xf86" name="Mandrake Root" color="0x0" format="cntr-5" enabled="True" image="True"/>
-  <counter graphic="0xf7a" name="Black Pearl" color="0x0" format="cntr-6" enabled="True" image="True"/>
- </counters>
  <scavenger enabled="False"/>
  <autosearchexemptions/>
  <objects>
@@ -118,29 +110,37 @@
   <container>0xffffffff</container>
   <guards>False</guards>
  </autoloot>
- <spellgrid/>
  <organizer>
-  <group loop="False" name="IngotShift" source="0x40044d54" stack="True" complete="True" target="0x40044e56">
+  <group stack="True" target="0x40044e56" loop="False" name="IngotShift" complete="True" source="0x40044d54">
    <item graphic="0x19b9" amount="0x0"/>
    <item graphic="0x19ba" amount="0x0"/>
    <item graphic="0x19b8" amount="0x0"/>
    <item graphic="0x19b8" amount="0x0"/>
    <item graphic="0x19b7" amount="0x0"/>
   </group>
-  <group loop="False" name="TrashShift" source="0x40044d54" stack="True" complete="True" target="0x40048d7a">
+  <group stack="True" target="0x40048d7a" loop="False" name="TrashShift" complete="True" source="0x40044d54">
    <item graphic="0xfbb" amount="0x0"/>
    <item graphic="0xf39" amount="0x0"/>
    <item graphic="0x1eb8" amount="0x0"/>
   </group>
-  <group loop="False" name="OreShift" source="0x40044d54" stack="True" complete="True" target="0x40044e56">
+  <group stack="True" target="0x40044e56" loop="False" name="OreShift" complete="True" source="0x40044d54">
    <item graphic="0x19b9" amount="0x0"/>
    <item graphic="0x19b7" amount="0x0"/>
    <item graphic="0x19ba" amount="0x0"/>
    <item graphic="0x19b8" amount="0x0"/>
   </group>
  </organizer>
+ <spellgrid/>
  <vendors>
   <buystate list="" enabled="False"/>
   <sellstate list="" enabled="False"/>
  </vendors>
+ <counters>
+  <counter format="cntr" graphic="0xf39" image="True" name="shovel" enabled="True" color="0x0"/>
+  <counter format="cntr-2" graphic="0x1eb8" image="True" name="tool kit" enabled="True" color="0x0"/>
+  <counter format="cntr-3" graphic="0x1bf2" image="True" name="ingots" enabled="True" color="0x0"/>
+  <counter format="cntr-4" graphic="0xf7b" image="True" name="Blood Moss" enabled="True" color="0x0"/>
+  <counter format="cntr-5" graphic="0xf86" image="True" name="Mandrake Root" enabled="True" color="0x0"/>
+  <counter format="cntr-6" graphic="0xf7a" image="True" name="Black Pearl" enabled="True" color="0x0"/>
+ </counters>
 </profile>

@@ -78,17 +78,6 @@
  <data name="AutoSearchContainers">False</data>
  <data name="AutoAcceptParty">False</data>
  <data name="StaticFieldsMode">0x0</data>
- <counters>
-  <counter image="True" graphic="0x1bd7" format="cntr" color="0x0" name="board" enabled="True"/>
-  <counter image="True" graphic="0xf7a" format="cntr-2" color="0x0" name="Black Pearl" enabled="True"/>
-  <counter image="True" graphic="0xf8c" format="cntr-3" color="0x0" name="Sulfurous Ash" enabled="True"/>
-  <counter image="True" graphic="0xf86" format="cntr-4" color="0x0" name="Mandrake Root" enabled="True"/>
-  <counter image="True" graphic="0xf7b" format="cntr-5" color="0x0" name="Blood Moss" enabled="True"/>
-  <counter image="True" graphic="0xef3" format="cntr-6" color="0x0" name="blank scroll" enabled="True"/>
-  <counter image="True" graphic="0x1bf2" format="cntr-7" color="0x0" name="ingots" enabled="True"/>
-  <counter image="True" graphic="0xf39" format="cntr-8" color="0x0" name="shovel" enabled="True"/>
-  <counter image="True" graphic="0x1eb8" format="cntr-9" color="0x0" name="tool kit" enabled="True"/>
- </counters>
  <scavenger enabled="False"/>
  <autosearchexemptions/>
  <objects>
@@ -121,44 +110,55 @@
   <container>0xffffffff</container>
   <guards>False</guards>
  </autoloot>
- <spellgrid/>
  <organizer>
-  <group complete="True" source="0x4001dec1" stack="True" target="0x40041b40" loop="False" name="RecallRegent">
-   <item amount="0x1e" graphic="0xf7b"/>
-   <item amount="0x1e" graphic="0xf7a"/>
-   <item amount="0x1e" graphic="0xf86"/>
+  <group stack="True" target="0x40041b40" loop="False" name="RecallRegent" complete="True" source="0x4001dec1">
+   <item graphic="0xf7b" amount="0x1e"/>
+   <item graphic="0xf7a" amount="0x1e"/>
+   <item graphic="0xf86" amount="0x1e"/>
   </group>
-  <group complete="True" source="0x40041b40" stack="True" target="0x4001dec1" loop="False" name="Boards">
-   <item amount="0x0" graphic="0x1bd7"/>
-   <item amount="0x0" graphic="0x1bd7"/>
-   <item amount="0x0" graphic="0x1bd7"/>
-   <item amount="0x0" graphic="0x3191"/>
-   <item amount="0x0" graphic="0x2f5f"/>
-   <item amount="0x0" graphic="0x318f"/>
-   <item amount="0x0" graphic="0x3199"/>
-   <item amount="0x0" graphic="0x3190"/>
+  <group stack="True" target="0x4001dec1" loop="False" name="Boards" complete="True" source="0x40041b40">
+   <item graphic="0x1bd7" amount="0x0"/>
+   <item graphic="0x1bd7" amount="0x0"/>
+   <item graphic="0x1bd7" amount="0x0"/>
+   <item graphic="0x3191" amount="0x0"/>
+   <item graphic="0x2f5f" amount="0x0"/>
+   <item graphic="0x318f" amount="0x0"/>
+   <item graphic="0x3199" amount="0x0"/>
+   <item graphic="0x3190" amount="0x0"/>
   </group>
-  <group complete="True" source="0x4001dec1" stack="True" target="0x40044d54" loop="False" name="BoardShift">
-   <item amount="0x64" graphic="0x1bd7"/>
+  <group stack="True" target="0x40044d54" loop="False" name="BoardShift" complete="True" source="0x4001dec1">
+   <item graphic="0x1bd7" amount="0x64"/>
   </group>
-  <group complete="True" source="0x40044d54" stack="True" target="0x40048d7a" loop="False" name="TrashShift">
-   <item amount="0x0" graphic="0x1032"/>
-   <item amount="0x0" graphic="0x10e7"/>
+  <group stack="True" target="0x40048d7a" loop="False" name="TrashShift" complete="True" source="0x40044d54">
+   <item graphic="0x1032" amount="0x0"/>
+   <item graphic="0x10e7" amount="0x0"/>
   </group>
-  <group complete="True" source="0x4001dec1" stack="True" target="0x40044d54" loop="False" name="IngotShift">
-   <item amount="0xc8" graphic="0x1bf2"/>
+  <group stack="True" target="0x40044d54" loop="False" name="IngotShift" complete="True" source="0x4001dec1">
+   <item graphic="0x1bf2" amount="0xc8"/>
   </group>
  </organizer>
+ <spellgrid/>
  <vendors>
   <buystate list="" enabled="False"/>
   <sellstate list="" enabled="False"/>
-  <shoppinglist complete="False" type="Buy" limit="999" name="Buy-1">
-   <item amount="999" graphic="0xf7b"/>
-   <item amount="999" graphic="0xf7a"/>
-   <item amount="999" graphic="0xf86"/>
+  <shoppinglist limit="999" type="Buy" name="Buy-1" complete="False">
+   <item graphic="0xf7b" amount="999"/>
+   <item graphic="0xf7a" amount="999"/>
+   <item graphic="0xf86" amount="999"/>
   </shoppinglist>
-  <shoppinglist complete="False" type="Buy" limit="999" name="Buy-2"/>
+  <shoppinglist limit="999" type="Buy" name="Buy-2" complete="False"/>
  </vendors>
+ <counters>
+  <counter format="cntr" graphic="0x1bd7" image="True" name="board" enabled="True" color="0x0"/>
+  <counter format="cntr-2" graphic="0xf7a" image="True" name="Black Pearl" enabled="True" color="0x0"/>
+  <counter format="cntr-3" graphic="0xf8c" image="True" name="Sulfurous Ash" enabled="True" color="0x0"/>
+  <counter format="cntr-4" graphic="0xf86" image="True" name="Mandrake Root" enabled="True" color="0x0"/>
+  <counter format="cntr-5" graphic="0xf7b" image="True" name="Blood Moss" enabled="True" color="0x0"/>
+  <counter format="cntr-6" graphic="0xef3" image="True" name="blank scroll" enabled="True" color="0x0"/>
+  <counter format="cntr-7" graphic="0x1bf2" image="True" name="ingots" enabled="True" color="0x0"/>
+  <counter format="cntr-8" graphic="0xf39" image="True" name="shovel" enabled="True" color="0x0"/>
+  <counter format="cntr-9" graphic="0x1eb8" image="True" name="tool kit" enabled="True" color="0x0"/>
+ </counters>
  <dresslist name="axe">
   <item layer="2">0x4004bf4d</item>
  </dresslist>
